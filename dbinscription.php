@@ -28,6 +28,7 @@ if (isset($_POST["submit"])) { //On vérifie que l'utilisateur a bien rempli le 
   	$secu = mysql_real_escape_string($_POST["securitesociale"]); //je récupère la valeur de l'input numero de secu
   	$alleregi = $_POST["alleregi"]; //je récupère la valeur de l'input allergie
 
+  	$image = array();
 
   	foreach ($_FILES as $key => $value) {
 	    $nomOrigine = $_FILES[$key]['name'];
@@ -46,6 +47,7 @@ if (isset($_POST["submit"])) { //On vérifie que l'utilisateur a bien rempli le 
 	                                         $repertoireDestination.$nomDestination)) {
 	            echo "Le fichier temporaire ".$_FILES[$key]["tmp_name"].
 	                    " a été déplacé vers ".$repertoireDestination.$nomDestination;
+	                   $image[$key] = $repertoireDestination.$nomDestination;
 	        } else {
 	            echo "Le fichier n'a pas été uploadé (trop gros ?) ou ".
 	                    "Le déplacement du fichier temporaire a échoué".
@@ -53,7 +55,7 @@ if (isset($_POST["submit"])) { //On vérifie que l'utilisateur a bien rempli le 
 	        }
 	    }
   	}
-/*
+
 
     $result2 = mysqli_query($conn, $verif); //Envoi de la requête à la base de donnée.
     if(mysqli_num_rows($result2) > 0) { // Si la base de donnée nous retourne au moins un élément (ce qui signifie que le pseudo existe déjà), alors exécuter la suite :
@@ -61,12 +63,16 @@ if (isset($_POST["submit"])) { //On vérifie que l'utilisateur a bien rempli le 
         echo "ce pseudo existe déjà";
         die;
     }else { // Sinon
-    	$sql = "INSERT INTO stagiaire(`formation`,`nom`, `prenom`, `date de naissance`, `adresse`, `code_postal`, `Ville`, `num_inscription_JS`, `num_securite_social`, `tel`, `Email`, `sexe`, `statut`, `mdp`, `numeroLicence`, `priseEnChargeFinanciere`, `montantaide`, `organisme`, `personne_urgence`, `tel_urgence`, `medical`, `attestation`) VALUES ('$formation','$name','$firstname','$date','$adress','$codepo','$city','$numjs','$secu','$tel','$pseudoi','$sex','','','$licence','$aide','$montaide','$orgaide','$contacturg','$telurg','$alleregi',1)";
+    	$sql = "
+INSERT INTO stagiaire(`formation`,`nom`, `prenom`, `date de naissance`, `adresse`, `code_postal`, `Ville`, `num_inscription_JS`, `num_securite_social`, `tel`, `Email`, `sexe`, `statut`, `mdp`,
+ `numeroLicence`, `priseEnChargeFinanciere`, `montantaide`, `organisme`, `personne_urgence`, `tel_urgence`, `medical`, `attestation`) 
+ VALUES ('$formation','$name','$firstname','$date','$adress','$codepo','$city','$numjs','$secu','$tel','$pseudoi','$sex','','',
+ '$licence','$aide','$montaide','$orgaide','$contacturg','$telurg','$alleregi',1)";
       //$sql2 = "INSERT INTO `client`(`email`, `pass`) VALUES ('$pseudoi','".crypt_password($mdpi)."')"; //Requête qui permet d'insérer un nouvel utilisateur désigné par son mail et mot de passe (que l'on crypte), on entre pas l'id puisque cette dernière s'autoincrémente déjà.
         mysqli_query($conn, $sql); // Envoie de la requête à la base de donnée.
         echo "ok<br>".$sql;
         die;
-    }*/
+    }
 }
 
 
