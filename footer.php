@@ -17,6 +17,8 @@
 		
 		
 		<link href="css/styleFooter.css" rel="stylesheet"/>	
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 	</head>
 	<body>
 		<div>
@@ -25,12 +27,19 @@
 				<!-- FOOTER -->
 				<footer>
 					<div class="container foot2">
-						<div class="col-md-4 col-xs-4 copy2">&copy Copyright FSCF-2016</div><!-- copyright -->
-						<div class="col-md-4 col-xs-4 adresse2"><!-- coordonnées physiques -->
+						<div class="col-md-4 col-xs-4 copy2">
+						<!-- Icones sociales -->
 							<div>
-								<span class="social social-facebook"></span>
-								<span class="social social-twitter"></span>
+								<i class="fa fa-facebook"></i>
+								<i class="fa fa-twitter"></i>
+								<i class="fa fa-linkedin"></i>
+								<i class="fa fa-rss"></i>
+								<i class="fa fa-google-plus-official"></i>
+								<i class="fa fa-instagram"></i>
 							</div>
+						&copy Copyright FSCF-2016
+						</div><!-- copyright -->
+						<div class="col-md-4 col-xs-4 adresse2"><!-- coordonnées physiques -->
 							<p>
 								FSCF 16 boulevard de la Marne. BP 11. 89000 Auxerre<br>
 								Tel : 03.86.72.11.27<br>
