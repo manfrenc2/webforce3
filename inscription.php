@@ -1,53 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<!-- spécifie le type d'encodage de la page -->
-		<meta charset="utf-8">
-		<!-- rendre compatible la mise en forme sur edge -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- comportement que le navigateur doit adopter concernant l'affiche du site (par rapport à l'écran)-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Titre du Site -->
-		<title>FSCF - YONNE | Fédération Sportive et Culturelle de France</title>
-		<!-- Shortcut du logo du site -->
-		<link rel="icon" type="image/png" href="img/shortcut_img.png"/> 
-		<!-- import du fichier Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-		<!-- import du fichier de style CSS pour la page d'inscription -->
-		<link href="css/inscription.css" rel="stylesheet"/>	
-	</head>
+	<?php include ('header.php'); ?>
 
 	<body>
 		<div class="container">						
-			<!-- barre de header principale avec logo, inscription et connexion A RETRAVAILLER -->
-			<header>
-				<div class="row">
-					<div class="col-md-4"><img alt="logo" id="width" href="#" src="img/logo.png"> </div>				  
-					<!-- bouton à travailler avec une favicon ??  -->
-					<div class="col-md-4 petitpad"><a href="#"> Je m'inscris au BAFA/ BAFD / FORMATION CONTINUE</a></div>
-					<!-- emplacement pour se connecter -->		  
-					<div class="col-md-4 petitpad">
-						<input>Login</input>
-						<input type="password">Mot de passe</input>
-						<button>Login</button>
-					</div> 					
-				</div>
-			</header>
-			<!-- barre de navigation A RETRAVAILLER  -->
-			<nav class="navbar navbar-inverse">
-				<ul class="nav navbar-nav">
-					<li><a href="#">Accueil</a></li>
-					<li><a href="#">Formations</a></li>  
-					<ul class="dropdown-menu">
-						<li><a href="#">Page 1-1</a></li>
-						<li><a href="#">Page 1-2</a></li>
-						<li><a href="#">Page 1-3</a></li>
-					</ul>
-					<li><a href="#">FAQ</a></li>  
-					<li><a href="#">Contactez-nous</a></li>  
-					<li><a href="#">Qui sommes-nous ?</a></li>  
-				</ul>
-			</nav>
+			
 			<!-- Début du contenue principale -->					
 			<section>
 				<h1 class="title"> Inscription </h1>	

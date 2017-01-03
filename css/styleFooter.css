@@ -1,0 +1,35 @@
+a{
+	color: #cfd2da;
+}
+.foot2{
+	background-color: black;
+    color:  #cfd2da;
+    font-size: x-small;
+    margin: 0;
+
+}
+.legal{
+	float: right;
+	display: inline;
+    padding-top: 1%;
+    vertical-align: top;
+    text-align: right;
+    width: 35%;
+}
+.copy2{
+	display: inline;
+    float: left;
+    padding-top: 2%;
+    vertical-align: top;
+    width: 35%;
+
+}
+.adresse2{
+	padding-top: 1%;
+    display: inline;
+    text-align: center;
+    width: 30%;
+}
+.container{
+	width: 100%;
+}
