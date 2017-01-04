@@ -11,6 +11,9 @@
 body{ /* empèche la barre de scroll horizontale d'apparaître */
 	overflow-x: hidden;
 }
+footer{ /* décale le footer du contenu principal */
+	padding-top: 4%;
+}
 a{ /* couleur des liens en gris */
 	color: #cfd2da;
 }
@@ -31,7 +34,7 @@ a{ /* couleur des liens en gris */
 .copy2{ /* Placement des copyrights */
 	display: inline;
     float: left;
-    padding-top: 2%;
+    padding-top: 1%;
     vertical-align: top;
     width: 35%;
 }
