@@ -1,0 +1,294 @@
+/* CSS Feuille de styles */
+@import "bootstrap.min.css";
+@import "font-awesome.min.css";
+/* GÉNÉRAL */
+
+/* couleur du background de la page */
+body{
+	background-color: #FFFFFF;
+}
+
+/* couleur du glyphicon (a coté de je m'inscris au BAFA/BAFD)*/
+.fa-book:before{
+	color: #fab900;
+}
+
+/* CORPS DE LA PAGE */
+
+/* HEADER DE LA PAGE */
+header{
+	display: inline-block; 
+	width: 100%; 
+	background : transparent; 
+}
+/* section logo, lien d'inscription et connexion */
+.logo{
+	float: left; 
+	display: inline; 
+	padding-top: 2%;
+	width: 100%;
+}
+
+.central{
+	display: inline; 
+	padding-top: 8%; 
+	text-align: center;
+}
+
+.fa{ /* le petit livre devant le lien d'inscription */
+	color: #009de0;
+}
+
+.connect{
+	float: right; 
+	display: inline; 
+	padding-top: 3%;
+}
+
+
+/* SOUS-MENU DÉROULANT */
+/* topnav est la première liste du menu, et menuScroll est un sous-menu */
+
+#topnav{	/* Couleur, placement, alignement, customisation de la topnav (barre noire) */
+	background-color: black;
+	border-radius: 15px;
+	margin-top: 2%;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 4%;	
+}
+
+.barnav{ /* Couleur, separation de barnav */
+	border-left: solid 1px #464950;
+    color: #cfd2da;
+    font-weight: bold;
+}
+
+.hambouton {
+	display: none;
+}
+
+.menu {
+	display: none;
+}
+
+#topnav li{
+	display: inline-block;
+
+	 
+}/* affichage en ligne des éléments du menu */
+#topnav a{     
+	display: block; 
+	padding: 0; 
+	text-decoration: none;
+	color: #cfd2da;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#topnav a:hover, #topnav a:focus, #topnav a:active{
+	text-decoration: none;
+}
+
+#menuScroll{ /* on cache le sous-menu à l'affichage de la page */
+	display: none; 
+	text-decoration: none; 
+	position: absolute; 
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+#topnav .barnav:hover ul{ /* on affiche le sous-menu au survol de la souris sur "formations" */
+	display: block; 
+}
+
+#menuScroll li{ /* disposition des éléments du sous-menu */
+	display: block; 
+	padding: 0; 
+	left: 0; 
+	list-style: none; 
+	width: inherit;
+}
+
+#menuScroll li a:link{ /* une petite barre de couleur apparait à gauche de chaque élément du sous-menu */
+	padding: 0; 
+	margin: 0; 
+	text-decoration: none; 
+	border-left: 5px solid #e2007b; 
+	color: black;
+}
+
+#menuScroll li a:hover{ /* et elle change de couleur au survol sur l'élément */
+	display: block; 
+	border-left: 5px solid #f4c000; 
+	color: #009de0;
+}
+
+/* FIN DU HEADER */
+
+
+/* RESPONSIVE */
+/* pour les petits écrans */
+@media screen and (min-device-width: 300px) and (max-device-width: 767px){
+	/* nav{display: none;} */
+
+	.container { /* suppression des marges pour les petits écrans */
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.logo { /* position du logo */
+		position: absolute;
+	}
+
+	.fa { /* disparition de l'icone "je m'inscris" */
+		display: none;
+	}
+
+	.ins { /* disparition du liens "je m'inscris" */
+		display: none;
+	}
+
+	.connect{ /* largeur, marge du form connexion */
+		width: 100%;
+		margin-top: 6%;
+	}
+
+	.navbar { /* disparition de la navbar pour les petits écrans */
+		display: none;
+	}
+
+
+
+	.hamburger{
+	  background:black;
+	  position:absolute;
+	  top:0;
+	  right:0;
+	  line-height:45px;
+	  padding:0px 15px 0px 15px;
+	  color:#fff;
+	  border:0;
+	  font-size:1.4em;
+	  font-weight:bold;
+	  cursor:pointer;
+	  outline:none;
+	  z-index:10000000000000;
+	}
+
+	.cross{
+	  background:none;
+	  position:absolute;
+	  top:0px;
+	  right:0;
+	  padding:0px 15px 0px 15px;
+	  color:#fff;
+	  border:0;
+	  font-size:3em;
+	  line-height:65px;
+	  font-weight:bold;
+	  cursor:pointer;
+	  outline:none;
+	  z-index:10000000000000;
+	}
+
+	.hambouton {
+		display: block;
+	}
+
+	.menu {
+		z-index:1000000; 
+		font-weight:bold; 
+		font-size:0.8em; 
+		width:100%; 
+		background:black;  
+		position:absolute; 
+		text-align:center;
+		display: block;
+	}
+	.menu ul {
+		margin: 0; 
+		padding: 0; 
+		list-style-type: none; 
+		list-style-image: none;
+	}
+
+	.menu li {
+		display: block;   
+		padding:15px 0 15px 0; 
+		border-bottom:#1d1f20 1px solid;
+	}
+
+	.menu li:hover{
+		display: block;    
+		background:#181818; 
+		padding:15px 0 15px 0; 
+		border-bottom:#1d1f20 1px solid;
+	}
+
+	.menu ul li a { 
+		text-decoration:none;  
+		margin: 0px; color:#fff;
+	}
+
+	.menu ul li a:hover {  
+		color: #fff; 
+		text-decoration:none;
+	}
+
+	.menu a{
+		text-decoration:none; 
+		color:white;
+	}
+
+	.menu a:hover{
+		text-decoration:none; 
+		color:white;
+	}
+
+	.glyphicon-home{
+	  color:white; 
+	  font-size:1.5em; 
+	  margin-top:5px; 
+	  margin:0 auto;
+	}
+}
+/* pour les tablettes */
+@media screen and (min-device-width: 768px) and (max-device-width: 991px){
+	/* nav{display: none;} */
+	
+	.logo, .central, {
+		margin: auto; 
+		text-align: center;
+	}
+
+	.connect{
+		width: 100%;
+	}
+
+	.mg {
+		margin-left: -3%;
+	}
+
+	.md {
+		margin-right: 2%;
+	}
+
+	#topnav{	/* Couleur, placement, alignement, customisation de la topnav (barre noire) */
+	background-color: black;
+	border-radius: 15px;
+	margin-top: 2%;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 5%;	
+	}
+
+}
+	
+
+
+
+
