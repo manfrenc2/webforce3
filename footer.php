@@ -1,32 +1,8 @@
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<!-- rendre compatible la mise en forme sur edge -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<!-- comportement que le navigateur doit adopter concernant l'affiche du site (par rapport à l'écran)-->
-		<?php $title=""; ?>
-		<!-- Shortcut du logo du site -->
-		<link rel="icon" type="image/png" href="img/shortcut_img.png"/> 
-		<!-- import du fichier Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-		<!-- import du fichier de style CSS pour la page d'inscription -->
-		
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		
-		
-		<link href="css/styleFooter.css" rel="stylesheet"/>	
-		
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-	</head>
-	<body>
-		<div>
-			<main>	
 				<!-- 2ème découpe (footer.php)-->
 				<!-- FOOTER -->
 				<footer>
-					<div class="container foot2">
+					<div class="foot2">
 						<div class="col-md-4 col-xs-4 copy2">
 						<!-- Icones sociales -->
 							<div>
@@ -55,8 +31,6 @@
 						</div><!-- mentions légales -->
 					</div>
 				</footer><!-- FIN DU FOOTER -->
-			</main>
-		</div>
 		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>		
 		<script src="js/bootstrap.min.js"></script>

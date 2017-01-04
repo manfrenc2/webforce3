@@ -4,6 +4,11 @@
 /*							FOOTER								 	 */
 /*																	 */
 /*********************************************************************/
+footer{
+    width: 126%;
+    margin-left: -14%;
+    margin-top: 2%;
+}
 a{ /* couleur des liens */
 	color: #cfd2da;
 }
@@ -12,7 +17,8 @@ a{ /* couleur des liens */
     color:  #cfd2da;
     font-size: x-small;
     margin: 0;
-
+    padding-bottom: 5%;
+    margin-top: 16%;
 }
 .legal{ /* Placement des CGU CGV */
 	float: right;
