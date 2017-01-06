@@ -1,0 +1,347 @@
+/* CSS import des feuille de styles */
+@import "bootstrap.min.css";
+@import "font-awesome.min.css";
+			
+			
+/*********************************************************************/
+/*																	 */
+/*							HEADER								 	 */
+/*																	 */
+/*********************************************************************/
+
+												
+body{ /* couleur du background de la page (blanc)& empèche la barre de scroll horizontale d'apparaître*/
+	background-color: #FFFFFF;
+	overflow-x: hidden;
+}
+
+header{ /* largeur du header */
+	display: inline-block; 
+	width: 100%; 
+}
+
+.logo{/* section logo */
+	padding-top: 2%;
+	width: 100%;
+}
+
+.fa-book{ /* couleur du glyphicon (à gauche de 'je m'inscris au BAFA/BAFD')*/
+	color: #bbcedc;
+}
+
+.inscription{   /* Mise en forme du "je  m'inscris au BAFA/BAFD" au centre du header */
+	background-color: #009ee2;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 1%;
+	margin-left: 30%;
+	border-radius: 15px;
+	
+}
+.central{ /* Modification sur la div contenant le "je m'inscris au BAFA/BAFD" pour ajuster l'alignement */
+	padding-top: 8%; 
+	text-align: center;
+}
+
+.connect{ /* Modification sur la div contenant le texte "connexion" au dessus des inputs de connexion afin de l'ajuster sur la page */
+	float: right; 
+	display: inline; 
+	padding-top: 3%;
+}
+
+.connexion{  /* Modification sur le texte au dessus des inputs pour la connexion */
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	width: 62%;	
+}
+
+	
+.buttonlogin{  	/* Mise en forme du bouton "se connecter" */
+    padding: 12px 21px 12px 21px;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgb(229, 0, 126);
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+	border-style: none;	
+}
+
+
+.center{ /* forçage alignement du bouton "se connecter" sur la div le contenant */
+	 text-align:center;
+}
+ 
+.buttonlogin:active{ /* petit effet sur le bouton (à voir si on le conserve ?)*/ 
+  transform: scale(1.1);
+}
+
+.passforget{ /* modification du "identifiant ou mot de passe oublié" */
+	font-size: x-small;
+	text-align: center;
+	margin-top: 5%;
+}
+
+
+.linkmdp{ /* couleur sur le "mot de passe oublié" */
+	color:#055ca8;	
+}
+
+
+
+/****************** Début de la NAVBAR ******************/ 
+
+
+.hambouton { /* classe pour caché pour empêcher l'apparition du menu hamburger pour le responsive (modification plus tard dans les medias) */
+	display: none;
+}
+
+.menu { /* div sur laquelle le nouveau menu est mis en place et donc caché mais également modifié plus tard dans les medias */
+	display: none;
+}
+
+.barnav{ /* border à gauche sur le texte de la navbar, couleur du texte et ajustement, curseur selon le contexte */
+	border-left: solid 1px #464950;
+    color: #ffffff;
+    font-weight: bold;
+	cursor: context-menu;
+}
+
+/* hover sur chaque texte de la navbar */
+.red:hover{ 
+	color:#e32213 !important;
+}
+.magenta:hover{
+	color:#e5007e !important;
+}
+
+.blue:hover{
+	color:#009ee2 !important;
+}
+
+.yellow:hover{
+	color:#fab900 !important;
+}
+
+#topnav{	/* Couleur, placement, alignement, customisation de la topnav (barre noire) */
+	background-color: black;
+	border-radius: 15px;
+	margin-top: 2%;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 4%;	
+}
+#topnav li{ /* mode de rendu que les li doivent adopter */
+	display: inline-block;
+
+	 
+}
+#topnav a{     /* mise en forme du texte "accueil" */
+    font-weight: bold;
+}
+
+#menuScroll{ /* on cache le sous-menu de formations à l'affichage de la page */
+	display: none; 
+	position: absolute; 
+}
+
+#topnav .barnav:hover ul{ /* on affiche le sous-menu au survol de la souris sur "formations" */
+	display: block; 
+}
+
+#menuScroll li{ /* disposition des éléments du sous-menu */
+	display: block;  
+}
+
+#menuScroll li a:link{ /* une petite barre de couleur apparait à gauche de chaque élément du sous-menu  + modification de la classe bootstrap pour supprimer des borders*/
+	padding: 4%; 
+	margin: 0; 
+	border-left: 5px solid #e2007b; 
+	color: black;
+	border-top-style: none !important;
+    border-right-style: none !important;
+    border-bottom-style: none !important;
+}
+
+#menuScroll li a:hover{ /* et elle change de couleur au survol sur l'élément */
+	display: block; 
+	border-left: 5px solid #f4c000; 
+	color: #009de0;
+}
+
+
+
+
+/****************** RESPONSIVE  ******************/ 
+
+/* pour les petits écrans */
+											
+@media only screen and (min-width: 300px) and (max-width: 767px){
+	
+
+	.container { /* suppression des marges pour les petits écrans */
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.logo { /* position du logo et taille */
+		position: absolute;
+		width: 144%;
+	}
+
+	.fa { /* disparition de l'icone "je m'inscris" */
+		display: none;
+	}
+
+	.ins { /* disparition du liens "je m'inscris" */
+		display: none;
+	}
+
+	.connect{ /* largeur, marge du form connexion */
+		width: 100%;
+		margin-top: 6%;
+	}
+
+	.navbar { /* disparition de la navbar pour les petits écrans */
+		display: none;
+	}
+
+
+
+	.hamburger{ /* Mise en forme du bouton hamburger */
+	  background:black;
+	  position:absolute;
+	  top:0;
+	  right:0;
+	  line-height:45px;
+	  padding:0px 15px 0px 15px;
+	  color:#fff;
+	  border:0;
+	  font-size:1.4em;
+	  font-weight:bold;
+	  cursor:pointer;
+	  outline:none;
+	  z-index:10000000000000;
+	}
+
+	.cross{ /* Croix pour fermer le menu hamburger */
+	  background:none;
+	  position:absolute;
+	  top:0px;
+	  right:0;
+	  padding:0px 15px 0px 15px;
+	  color:#fff;
+	  border:0;
+	  font-size:3em;
+	  line-height:65px;
+	  font-weight:bold;
+	  cursor:pointer;
+	  outline:none;
+	  z-index:10000000000000;
+	}
+
+	.hambouton { /* activer le visibilité du bouton hamburger */
+		display: block;
+	}
+
+	.menu { /* Apparence du menu déroulant quand on clique sur le bouton hamburger */
+		z-index:1000000; 
+		font-weight:bold; 
+		font-size:0.8em; 
+		width:100%; 
+		background:black;  
+		position:absolute; 
+		text-align:center;
+		display: block;
+	}
+	.menu ul { /* Mise en forme du menu déroulant */ 
+		margin: 0; 
+		padding: 0; 
+		list-style-type: none; 
+		list-style-image: none;
+	}
+
+	.menu li { /* Mise en forme du menu déroulant */ 
+		display: block;   
+		padding:15px 0 15px 0; 
+		border-bottom:#1d1f20 1px solid;
+	}
+
+	.menu li:hover{ /* surlignement du texte sur chaque parties du menu*/
+		display: block;    
+		background:#181818; 
+		padding:15px 0 15px 0; 
+		border-bottom:#1d1f20 1px solid;
+	}
+
+	.menu ul li a {  /* Concerne le menu hamburger */
+		text-decoration:none;  
+		margin: 0px;
+		color:#fff;
+	}
+
+	.menu ul li a:hover {   /* Concerne le menu hamburger */
+		color: #fff; 
+		text-decoration:none;
+	}
+
+	.menu a{  /* Concerne le menu hamburger */
+		text-decoration:none !important; 
+		color:white;
+		
+	}
+
+	.menu a:hover{  /* Concerne le menu hamburger */
+		text-decoration:none !important; 
+		color:white; 
+	}
+
+}
+
+
+/* pour les tablettes */
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+	.logo, .central, { /* modification du logo & du "je m'inscris au BAFA" */ 
+		margin: auto; 
+		text-align: center;
+	}
+
+	.connect{ /* aggrandissement du formulaire de connexion */
+		width: 100%;
+	}
+
+	.mg { /* alignement de la navbar */
+		margin-left: -3%;
+	}
+
+	.md { /* alignement de la navbar */
+		margin-right: 2%;
+	}
+
+	#topnav{	/* Couleur, placement, alignement, customisation de la topnav (barre noire) pour tablette */
+	background-color: black;
+	border-radius: 15px;
+	margin-top: 2%;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 5%;	
+	}
+
+}
+
+
+
+/* FIN DU HEADER */
+
+
+
+
+
+
+
