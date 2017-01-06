@@ -108,7 +108,9 @@ header{ /* largeur du header */
     font-weight: bold;
 	cursor: context-menu;
 }
-
+.adjust{ /* le sous menu de formations flotte constament par dessus tous les éléments */
+	z-index: 4
+}
 /* hover sur chaque texte de la navbar */
 .red:hover{ 
 	color:#e32213 !important;
