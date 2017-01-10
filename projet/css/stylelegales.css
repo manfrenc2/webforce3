@@ -1,0 +1,28 @@
+/****************************************************/
+/*                                                  */
+/*                 Mentions légales                 */
+/*                                                  */
+/****************************************************/
+section > h4 { /* centrage des titres d'article */
+	text-align: center;
+}
+.mentionplace{ /* placement du texte */
+    margin-left: 25%;
+    margin-bottom: 4%;
+}
+.titremention{
+	background:#e2007b;
+	text-align: center; 
+}
+.blue{
+	color:#57abe0;
+}
+.red{
+	color:#e01c23;
+}
+.magenta{
+	color:#e2007b;
+}
+.yellow{
+	color:#f4c000;
+}

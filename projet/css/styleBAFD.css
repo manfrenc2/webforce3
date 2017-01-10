@@ -1,0 +1,140 @@
+/****************************************************/
+/*                                                  */
+/*                   BAFA                           */
+/*                                                  */
+/****************************************************/
+p > i > span{ /* couleur rouge dans texte en italique */
+   color:red;
+}
+.sens{ /*placement div centrale */
+   margin-top: 4%;
+}
+.titreBaFD{ /* placement titre page */
+   text-align: center;
+   margin-top: 8%;
+}
+/*******bulles pour etapes*************/
+#talkbubble { /* taille et placement des bulles*/
+   width: 11%;
+   height: 8em;
+   background: lightgrey;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         30px;
+}
+#talkbubble:before { /* taille et placement des pointes pour les bulles*/
+    content: "";
+    position: relative;
+    right: -36%;
+    top: 9.5em;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-top: 2em solid lightgrey;
+    border-right: 1em solid transparent;
+}
+.bulle11{ /* placement bulle 1 */
+   margin-left: 0%;
+}
+.bulle21{ /* placement bulle 2 */
+   margin-left: 19%;
+}
+.bulle31{ /* placement bulle 3 */
+   margin-left: 19%;
+}
+.bulle41{ /* placement bulle 4 */
+   margin-left: 18%;
+}
+.etape{ /* alignement au centre du texte dans la bulle */
+   text-align: center;
+   color: black;
+}
+.etape:hover{ /* alignement au centre du texte dans la bulle */
+   border-bottom: solid;
+   border-color: black;
+   border-width: 1px;
+}
+.placementtext{ /* placement du texte expliquant le bafa*/
+   margin-top: 20%;
+   -webkit-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75);
+   -moz-box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75);
+   box-shadow: 0px 0px 7px 10px rgba(0,0,0,0.75);
+}
+/***************** bouton rond inscrivez vous ***********************/
+.placementbouton{ /* placement gros bouton bleu */
+   margin-top: 25%;
+}
+.bouton17 { /*taille de la div du bouton */
+   width:75%;
+   margin-left: 25%;
+}
+.round-button-circle { /* decoration du bouton */
+   width: 100%;
+   height:0;
+   padding-bottom: 100%;
+   border-radius: 50%;
+   border:10px solid #cfdcec;
+   overflow:hidden;
+   margin-top: 60%;
+   background: #4679BD; 
+   box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover { /* cahngement fond sur bouton */
+   background:#30588e;
+}
+.bouton17 a { /* texte dans bouton */
+   display:block;
+   float:left;
+   width:100%;
+   padding-top:50%;
+   padding-bottom:50%;
+   line-height:1em;
+   margin-top:-0.5em;
+   text-align:center;
+   color:white;
+   font-size:1.2em;
+   font-weight:bold;
+   text-decoration:none;
+   margin-left: 2%;
+}
+.bouton17 a:hover{ /* couleur du text quand hover */
+  color: #9E9E9E;
+}
+/*********** Dates **********/
+.boutondates{ /* placement du bouton6 */
+   margin-top: 54%;
+   margin-bottom: 2%;
+}
+.bouton6 { /* style du bouton des dates calendriers */
+   border-radius:12px 0 12px 0;
+   background: #478bf9;
+   border:none;
+   color:#fff;
+   font:bold 12px Verdana;
+   padding:6px 0 6px 0;
+   width: 100%;
+   margin-top: 4%;
+}
+.placelist{ /* placement liste une */
+   float: left;
+}
+.placelist2{ /* placement liste deux */
+   float: right;
+}
+/***** Format Tablette et smartphone *****/
+@media screen and ( max-device-width:991px){
+
+   #talkbubble{ /* je fait disparaitre les bulles */
+      display: none;
+   }
+   .bouton17 { /* je replace le bouton circulaire */
+   margin-top: -38%;
+   margin-left: 15%;
+   }
+   .boutondates{ /* je replace le bouton6 */
+    margin-top: 10%;
+    margin-bottom: 2%;
+   }
+   
+}

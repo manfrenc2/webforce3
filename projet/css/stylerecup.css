@@ -1,0 +1,18 @@
+a button.btn-danger{
+	display: block;
+    margin : auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+.titrerecup{
+	text-align: center;
+	margin-top: 8%;
+}
+.titreemail{
+	text-align: center;
+}
+.inputmail{
+	width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+}
