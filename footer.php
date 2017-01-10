@@ -1,8 +1,20 @@
+<!DOCTYPE html>
 <html lang="fr">
-				<!-- 2ème découpe (footer.php)-->
+			<head> 
+				<meta charset="utf-8">				
+				<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+				<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+				<!-- Shortcut du logo du site -->
+				<link rel="icon" type="image/png" href="img/shortcut_img.png"/> 
+				<!-- import du fichier Bootstrap -->
+				<link href="css/bootstrap.min.css" rel="stylesheet"/>
+				<link rel="stylesheet" type="text/css" href="css/stylefooter.css"/>	
+			</head>
+			
+			<body>
 				<!-- FOOTER -->
 				<footer>
-					<div class="foot2">
+					<div class="foot2 row">
 						<div class="col-md-4 col-xs-4 copy2">
 						<!-- Icones sociales -->
 							<div>
@@ -13,7 +25,7 @@
 								<i class="fa fa-google-plus-official"></i>
 								<i class="fa fa-instagram"></i>
 							</div>
-						&copy Copyright FSCF-2016
+							&copy Copyright FSCF-2016
 						</div><!-- copyright -->
 						<div class="col-md-4 col-xs-4 adresse2"><!-- coordonnées physiques -->
 							<p>
@@ -31,9 +43,6 @@
 						</div><!-- mentions légales -->
 					</div>
 				</footer><!-- FIN DU FOOTER -->
-		<script src="js/jquery-3.1.1.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>		
-		<script src="js/bootstrap.min.js"></script>
-   		<script src="js/script.js"></script>	
+
 	</body>
-</html><!-- Fin de 2ème découpe -->
+</html>

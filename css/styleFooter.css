@@ -1,14 +1,26 @@
-a{
+
+/*********************************************************************/
+/*																	 */
+/*							FOOTER								 	 */
+/*																	 */
+/*********************************************************************/
+
+
+/* IMPORTANT : Ne pas oublier d'ajouter à chaque fin de page une balise fermante </main> et d'inclure juste après le FOOTER afin que ce dernier ne prenne pas les propriétés de <main> */
+
+body{ /* empèche la barre de scroll horizontale d'apparaître */
+	overflow-x: hidden;
+}
+a{ /* couleur des liens en gris */
 	color: #cfd2da;
 }
-.foot2{
+.foot2{  /* Couleur arriere plan, texte, et taille du texte, règle la taille du margin*/
 	background-color: black;
     color:  #cfd2da;
     font-size: x-small;
     margin: 0;
-
 }
-.legal{
+.legal{  /* Placement des CGU CGV */
 	float: right;
 	display: inline;
     padding-top: 1%;
@@ -16,20 +28,21 @@ a{
     text-align: right;
     width: 35%;
 }
-.copy2{
+.copy2{ /* Placement des copyrights */
 	display: inline;
     float: left;
     padding-top: 2%;
     vertical-align: top;
     width: 35%;
-
 }
-.adresse2{
+.adresse2{ /* placement des coordonnées */
 	padding-top: 1%;
     display: inline;
     text-align: center;
     width: 30%;
 }
-.container{
+.container{ /* Surcharge de la classe bootstrap pour prendre toute la page */
 	width: 100%;
 }
+
+

@@ -20,8 +20,18 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/styleheader.css">
 		<link href="css/inscription.css" rel="stylesheet"/>	
-		
-
+		<link rel="stylesheet" type="text/css" href="css/styleC.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="css/styleFooter.css" rel="stylesheet"/>
+		<link href="css/styleBAFA.css" rel="stylesheet" media="screen">	
+		<link href="css/styleBAFD.css" rel="stylesheet" media="screen">	
+		<link href="css/styleform.css" rel="stylesheet" media="screen">
+		<link href="css/stylerecup.css" rel="stylesheet" media="screen">
+		<link href="css/styleprofil.css" rel="stylesheet" media="screen">
+		<link href="css/stylecgu.css" rel="stylesheet" media="screen">
+		<link href="css/stylecgv.css" rel="stylesheet" media="screen">
+		<link href="css/stylelegales.css" rel="stylesheet" media="screen">				
+		<link href="css/styleformation.css" rel="stylesheet" media="screen">
 	</head>
 	
 	<body>
