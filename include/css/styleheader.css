@@ -1,0 +1,286 @@
+/* CSS Feuille de styles créée par France Lanoy, Céline Roy, Karine Fiorini - 2016 */
+@import "bootstrap.min.css";
+@import "font-awesome.min.css";
+/* GÉNÉRAL */
+
+/* couleur du background */
+body{
+	background-color: #F4F6F7;
+}
+/* couleur du glyphicon */
+.fa-book:before{
+	color: #fab900;
+}
+/* CORPS DE LA PAGE */
+#container{
+	width: 100%; 
+	height: 100%; 
+	margin: 0 1%;
+}
+main{
+	width: 80%;
+	margin: 0 10%;	
+}
+/* les liens en général */
+a:link{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+/* FIN DU CORPS DE LA PAGE */
+section{
+	display: block; 
+	width: 100%;
+}
+/* HEADER DE LA PAGE */
+header{
+	display: inline-block; 
+	width: 100%; 
+	background : transparent; 
+}
+/* section logo, lien d'inscription et connexion */
+.logo, .logo img{
+	float: left; 
+	display: inline; 
+	padding-top: 5px;
+}
+.central{
+	display: inline; 
+	padding-top: 45px; 
+	ext-align: center;
+}
+.fa{/* le petit livre devant le lien d'inscirption */
+	color: #009de0;
+}
+.connect{
+	float: right; 
+	display: inline; 
+	padding-top: 20px;
+}
+/* barre de navigation */
+nav{/* barre de navigation */
+	width: 100%; 
+	height: 30px;
+	display: inline-block;
+	background: transparent; 
+	padding: 0; 
+	margin: 0; 
+	color: #337ab7;
+}
+/* SOUS-MENU DÉROULANT */
+/* topnav est la première liste du menu, et menuScroll est un sous-menu */
+#topnav{
+	margin-top: 1%;
+}
+#topnav li{/* affichage en ligne des éléments du menu */
+	display: inline-block; 
+	margin: 0; 
+	padding: 0 5%; 
+	list-style: none; 
+	width: 19%;
+}
+#topnav a{
+	display: block; 
+	padding: 0; 
+	text-decoration: none;
+}
+#topnav a:hover, #topnav a:focus, #topnav a:active{
+	text-decoration: none;
+}
+#menuScroll{/* on cache le sous-menu à l'affichage de la page */
+	display: none; 
+	text-decoration: none; 
+	position: absolute; 
+	list-style: none; 
+	margin: 0; 
+	padding: 0;
+}
+#topnav .barnav:hover ul{/* on affiche le sous-menu au survol de la souris sur "formations" */
+	display: block; 
+}
+#menuScroll li{/* disposition des éléments du sous-menu */
+	display: block; 
+	padding: 0; 
+	left: 0; 
+	list-style: none; 
+	width: inherit;
+}
+#menuScroll li a:link{/* une petite barre de couleur apparait à gauche de chaque élément du sous-menu */
+	padding: 0; 
+	margin: 0; 
+	text-decoration: none; 
+	border-left: 5px solid #e2007b; 
+	background: ; 
+	color: black;
+}
+#menuScroll li a:hover{/* et elle change de couleur au survol sur l'élément */
+	display: block; 
+	border-left: 5px solid #f4c000; 
+	background: ; 
+	color: #009de0;
+}
+/* FIN DU HEADER */
+/* DATES DE FORMATION */
+.dates{/*affichage du lien et du select en ligne */
+	display: inline-block; 
+	width: 100%; 
+	background: transparent; 
+	padding-left: 30%; 
+}
+.dates select, .btn h3{
+	display: inline; 
+	width: 40%; 
+	padding-top: 1%; 
+	margin: 0;
+	float: left;
+}
+.dates select{
+	margin-top: 7px; 
+	float: left;
+}
+/* slider d'images */
+.slider{
+	width: 100%; 
+	padding-top: 6%; 
+	background: transparent;
+}
+.carousel-caption{/* on agrandit la police du texte sous les images et on les met en gras */
+	font-weight: bold; 
+	font-size: 25px; 
+	color: white;
+}
+/* Qui sommes nous */
+.infos{
+	width: 100%; 
+	background: transparent;
+}
+.infos > h1{
+	text-align: center; 
+	margin: 0;
+}
+.infos p{/*redimensionnement des paragraphes */
+	padding: 1% 2%; 
+	margin: 0;
+}
+/* FOOTER */
+footer{
+	width: 100%; 
+	display: inline-block; 
+	background: transparent;
+}
+/* div contenant les éléments du footer */
+.foot{
+	margin:0;
+}
+/* copyright */
+.copy{
+	display: inline; 
+	float: left; 
+	padding-top: 1%; 
+	vertical-align: top; 
+	width: 30%;
+}
+/* coordonnéées physiques */
+.adresse{
+	padding-top: 1%; 
+	display: inline; 
+	text-align: center; 
+	width: 40%;
+}
+/* mentions légales */
+.legal{
+	display: inline; 
+	padding-top: 1%; 
+	vertical-align: top; 
+	text-align: right; 
+	width: 30%;
+}
+/* FIN DU FOOTER */
+
+/* RESPONSIVE */
+/* pour les petits écrans */
+@media screen and (min-device_width: 300px) and (max-device-width: 767px){
+	/* nav{display: none;} */
+	main{
+		width: 100%; 
+		margin: auto;
+	}
+	.logo, .central, .connect{
+		margin: auto; 
+		text-align: center; 
+		width: 100%; 
+		position: absolute;
+	}
+	.logo img{
+		left: 50%; 
+		margin: auto; 
+		position: absolute;
+	}
+	.dates{
+		text-align: left; 
+		padding: 0; 
+		margin: 0;
+	}
+	.taille{
+		display: block; 
+		width: 100%; 
+		padding: 0; 
+		margin: 0; 
+		clear: both; 
+		text-align: center;
+	}
+	.btn h3, select .choix{
+		width: 100%; 
+		display: block; 
+		font-size: 1em;
+	}
+	.btn, .select{
+		clear: both; 
+		vertical-align: top;
+	}
+}
+/* pour les tablettes */
+@media screen and (min-device-width: 768px) and (max-device-width: 991px){
+	/* nav{display: none;} */
+	main{
+		width: 100%; 
+		margin: auto;
+	}
+	.logo, .central, .connect{
+		margin: auto; 
+		width: 100%; 
+		text-align: center;
+	}
+	.dates{
+		display: block; 
+		width: 100%; 
+		background: transparent; 
+		padding: 0;
+	}
+	.taille{
+		display: block; 
+		width: 100%; 
+		padding: 1% 0 0; 
+		margin-top: 3%;
+	}
+	.btn h3, select .choix{
+		margin: 7px 0 0; 
+		width: 100%;
+		display: block; 
+		font-size: 1.5em;
+	}
+	.btn h3{
+		clear: both;
+	}
+	select .choix{
+		clear: both;
+	}
+}
+
