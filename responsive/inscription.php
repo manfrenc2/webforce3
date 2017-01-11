@@ -140,7 +140,7 @@
 				</div>
 				<div class="pad">					
 					<label><input  type="checkbox"/> Si paiement par un tiers, merci de cocher cette case <button type="button" class="btn btn-xs resphidden" data-toggle="tooltip" data-placement="right" title="Uniquement en cas de paiement par une autre personne que vous">?</button></label>
-					<label><input type="checkbox" id="termUse" name="termUse" required /> En cochant cette case, j'atteste avoir les pré-requis de la formation et avoir pris connaissance des <a class="link modiflink">conditions générales de vente </a><span class="asterisque">*</span> <button type="button" class="btn btn-xs resphidden" data-toggle="tooltip" data-placement="right" title="Vous devez cocher cette case pour pouvoir valider votre inscription">?</button></label>
+					<label><input type="checkbox" id="termUse" name="termUse" required /> En cochant cette case, j'atteste avoir les pré-requis de la formation et avoir pris connaissance des <a class="link modiflink" href="cgu.php" target="_blank">conditions générales de vente </a><span class="asterisque">*</span> <button type="button" class="btn btn-xs resphidden" data-toggle="tooltip" data-placement="right" title="Vous devez cocher cette case pour pouvoir valider votre inscription">?</button></label>
 					<input type="submit" id="submit" name="submit" class="btn btn-warning hidden"/>					
 				</div>
 			</form>		
