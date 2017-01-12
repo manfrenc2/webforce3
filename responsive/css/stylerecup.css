@@ -1,0 +1,61 @@
+/*********************************************************************/
+/*																	 */
+/*						MDP oublié ? 					 	 	*/
+/*																	 */
+/*********************************************************************/
+
+
+
+
+
+section{ /* Modication de la font pour toute la section */
+	font-family: 'Raleway',sans-serif;
+	margin-bottom: 4%;
+} 
+
+
+a button.btn-danger{ /* Css sur le bouton d'envoi */
+	display: block;
+    margin : auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+h3{    /* modification de taille sur la police */
+	font-size: 16px;
+}
+
+.titreemail{ /* alignement du titre h3 */
+	text-align: center;
+}
+
+.titrerecup { /* Initialisation du titre "FAQ" */
+    margin-bottom: 8%;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 32px;
+	text-transform: uppercase;
+}
+
+.inputmail{ /* Modification sur l'input */
+	width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+footer{ /* Rajout de propriété sur le footer car contenu trop petit et donc le footer était au milieu de l'écran, ces lignes de codes résolvent ce problème */
+	bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+/* Responsive du site mobile */
+@media screen and (max-width: 767px){
+	footer{ /* Changement de position pour le footer */
+		position: inherit;
+	}
+	section{ /* margin pour espacer le bouton du footer */
+		margin-bottom: 16%;
+	}
+}
