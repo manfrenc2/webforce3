@@ -1,0 +1,45 @@
+/****************************************************/
+/*                                                  */
+/*                 Mentions légales                 */
+/*                                                  */
+/****************************************************/
+
+
+section{ /* Modication de la font pour toute la section */
+	font-family: 'Raleway',sans-serif;
+	margin-bottom: 4%;
+} 
+
+section > h4 { /* centrage des titres d'article */
+	text-align: center;
+}
+
+.titreprofil{
+		    margin-bottom: 8%;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 25px;
+	text-transform: uppercase;
+}
+.mentionplace{ /* placement du texte */
+    margin-left: 25%;
+    margin-bottom: 4%;
+}
+.titremention{
+	background:#e2007b;
+	text-align: center; 
+	font-weight: bold;
+
+}
+.blue2{
+	color:#57abe0;
+}
+.red2{
+	color:#e01c23;
+}
+.magenta2{
+	color:#e2007b;
+}
+.yellow2{
+	color:#f4c000;
+}
