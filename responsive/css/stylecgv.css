@@ -1,9 +1,8 @@
 /****************************************************/
 /*                                                  */
-/*                 Mentions légales                 */
+/*                      CGV                         */
 /*                                                  */
 /****************************************************/
-
 
 section{ /* Modication de la font pour toute la section */
 	font-family: 'Raleway',sans-serif;
@@ -14,18 +13,18 @@ section > h4 { /* centrage des titres d'article */
 	text-align: center;
 }
 
-.titreprofil{
+.cgvplace{ /* placement du texte */
+    margin-left: 25%;
+    margin-bottom: 4%;
+}
+
+.titreprofil{ /* modification sur le titre */
 	margin-bottom: 8%;
     text-align: center;
     font-size: 32px;
     margin-top: 25px;
 	text-transform: uppercase;
 }
-.mentionplace{ /* placement du texte */
-    margin-left: 25%;
-    margin-bottom: 4%;
-}
-
 .blue2{
 	color:#57abe0;
 }
