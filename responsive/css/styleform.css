@@ -1,0 +1,120 @@
+/****************************************************/
+/*                                                  */
+/*                DEVENIR FORMATEUR                 */
+/*                                                  */
+/****************************************************/
+
+
+
+section{ /* Modication de la font pour toute la section */
+	font-family: 'Raleway',sans-serif;
+} 
+
+/**** Section 1 ****/
+
+.titreFormateur{ /* placement titre h1 */
+	margin-bottom: 8%;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 25px;
+	text-transform: uppercase;
+}
+.titleh4{ /* mise au centre des titres h4*/
+	text-align: center;
+}
+
+.sectionmoove{ /* placement de la section dates + bouton */
+	margin-bottom: 4%;
+}
+
+.place > p{ /* Mettre en forme les paragraphes */
+	text-align: justify;
+    margin-top: 3%;
+
+}
+
+.myButton { /*  forme du bouton nous contacter + place dans div à droite*/
+    padding: 12px 21px 12px 21px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgb(227, 34, 19);
+    border-radius: 10px;
+	margin-left: 80%;
+}
+
+.place{ /* centre les deux boutons FORMATEUR BAFA/BAFD et COMMENT DEVENIR FORMATEUR */
+	text-align: center;
+}
+
+[data-wipe] { /* création des deux boutons avec effet */
+	padding: 12px 18px;
+	position: relative;
+	border: 1px solid #445561;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-align: left;
+	color: #445561;
+	overflow: hidden;
+}
+
+[data-wipe]:before, [data-wipe]:after { /* mise en forme des boutons avant et après leur transformation */
+	content: attr(data-wipe);
+	padding-top: inherit;
+	padding-bottom: inherit;
+	white-space: nowrap;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	color: #F1F1F2;
+	background: #445561;
+}
+
+[data-wipe]:before { /* empêche le texte de sortir de son cadre avant la transformation */
+	left: 0;
+	text-indent: 18px;
+	width: 0;
+}
+
+[data-wipe]:after {/* empêche le texte de sortir de son cadre après la transformation */
+	padding-left: inherit;
+	padding-right: inherit;
+	left: 100%;
+	text-indent: calc(-100% - 36px);
+	transition: 0.2s ease-in-out;
+}
+
+[data-wipe]:hover:before {  /* initialise le hover quand on vient sur le bouton */
+	width: 100%;
+	transition: width 0.2s ease-in-out;
+}
+
+[data-wipe]:hover:after { /* initialise le hover quand on sort du bouton */
+	left: 0;
+	text-indent: 0;
+	transition: 0s 0.2s ease-in-out;
+}
+
+/**** Section 2 pour date ****/
+.listplace{ /* placement de la liste */
+	float: left;
+}
+
+
+
+/* Responsive du site mobile */
+@media screen and (max-width: 767px){
+	.myButton{
+		margin-left: 0%;
+	}
+	
+	p{
+		margin: auto;	
+		width: 90%;
+		margin-top: 6%;
+	}
+	.row{
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+}
