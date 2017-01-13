@@ -6,7 +6,7 @@
 		<div class="container">
 				<div class="alert alert-warning alert-dismissible fade in" role="alert"><!-- Message alertant les utilisateurs à se référer à la page "contact" si ils ont des questions supplémentaires-->
 					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				 Si vous ne trouvez aucune question à votre réponse, merci de nous contacter à l'endroit prévu en haut dans la barre de navigation.
+				  Si vous ne trouvez aucune réponse à votre question, merci de nous contacter <b><a class="color" href="contact.php"> ici.</a></b>
 				</div><br>
 				<div class="panel-group" id="accordion">
 					<div class="faqHeader">Questions générales </div>
@@ -18,7 +18,7 @@
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse">
 							<div class="panel-body">
-								<p>Le <strong>BAFA</strong> se déroule en 3 parties :  la formation générale (8 jours), le stage pratique (ce stage doit s'effectuer dans un accueil de loisirs ou un séjour de vacances pendant 14 jours), la session d'approfondissement (6 jours) ou de qualification (8 jours).
+								<p>Le <strong>BAFA</strong> se déroule en 3 parties : la formation générale (8 jours), le stage pratique (ce stage doit s'effectuer dans un accueil de loisirs ou un séjour de vacances pendant 14 jours), la session d'approfondissement (6 jours) ou de qualification (8 jours).
 								Ces 3 stages doivent impérativement s'effectuer dans l'ordre et en France.</p>
 							</div>
 						</div>
@@ -31,7 +31,7 @@
 						</div>
 						<div id="collapseTwo" class="panel-collapse collapse">
 							<div class="panel-body">
-								Le <strong>BAFD</strong>  se déroule en 4 parties: la formation générale (9 jours), le premier stage pratique (ce stage de 14 jours peut être effectué en direction ou en adjoint de direction dans un Accueils Collectifs de Mineurs en France),un stage de perfectionnement (6 jours) et le 2 ème stage pratique (ce stage de 14 jours doit être effectué en direction dans un ACM en France). A l'issu de ces 4 étapes, le candidat dépose à la Direction Régionale de la Jeunesse des Sports et de la Cohésion Sociale un bilan de formation. 
+								<p>Le <strong>BAFD</strong> se déroule en 4 parties: la formation générale (9 jours), le premier stage pratique (ce stage de 14 jours peut être effectué en direction ou en adjoint de direction dans un Accueil Collectif de Mineurs (ACM) en France),un stage de perfectionnement (6 jours) et le 2ème stage pratique (ce stage de 14 jours doit être effectué en direction dans un ACM en France). A l'issu de ces 4 étapes, le candidat dépose à la Direction Régionale de la Jeunesse des Sports et de la Cohésion Sociale un bilan de formation. </p>
 							</div>
 						</div>
 					</div>
@@ -43,8 +43,8 @@
 						</div>
 						<div id="collapseThree" class="panel-collapse collapse">
 							<div class="panel-body">
-								 Le <strong>BAFA</strong> permet de travailler à titre non professionnel dans des accueils collectifs de mineurs (centres de loisirs ou colonies de vacances).
-								 Le <strong>BAFD</strong> est le seul diplôme non professionnel qui permet d'être cadre dans des accueils collectifs de mineurs.
+								 Le <strong>BAFA</strong> permet de travailler à titre non professionnel dans des Accueils Collectifs de Mineurs (centres de loisirs ou colonies de vacances).
+								 Le <strong>BAFD</strong> est le seul diplôme non professionnel qui permet d'être cadre dans des Accueils Collectifs de Mineurs.
 							</div>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 						</div>
 						<div id="collapseFour" class="panel-collapse collapse">
 							<div class="panel-body">
-								Pour obtenir son diplôme, toutes les étapes du <strong>BAFA </strong> ou  <strong>BAFD </strong> doivent être validés puis votre dossier sera présenté devant un jury.							
+								<p>Pour obtenir son diplôme, toutes les étapes du <strong>BAFA </strong> ou du <strong>BAFD </strong> doivent être validées par le responsable de stage et l'inspecteur de la Jeunesse et Sports. A la suite, votre dossier sera présenté devant un jury.</p>				
 							</div>
 						</div>
 					</div>
@@ -78,14 +78,13 @@
 							<h4 class="panel-title"> <!-- Question n° jeunesse et sport -->
 								<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Où chercher mon numéro de dossier d'inscription Jeunesse et Sports ? </a>
 							</h4>
-						</div>
-					
+						</div>					
 						<div id="collapseSix" class="panel-collapse collapse">
 							<div class="panel-body">
-								<p>Le numéro de jeunesse et sport est indispensable pour s'inscrire au BAFA ou BAFD. Si vous souhaiter par la suite vous inscrire au BAFD, il est nécessaire de faire une autre demande de numéro de jeunesse et sport car ce dernier est différent de celui pour le BAFA. 
-								<br>Pour le récuperer, il suffit de <strong>cliquer sur le lien</strong> suivant et de suivre les indications : 
-															<a class="color" href="http://www.jeunes.gouv.fr/bafa-bafd" target="_blank">http://www.jeunes.gouv.fr/bafa-bafd</a>
-									</p>
+								<p>Le numéro de jeunesse et sport est indispensable pour s'inscrire au BAFA. Si vous souhaiter par la suite vous inscrire au BAFD, il est nécessaire de faire une autre demande de numéro de Jeunesse et Sports car ce dernier est différent de celui pour le BAFA. 
+								<br>Pour le récuperer, il suffit de <strong>cliquer sur le lien suivant</strong> et de suivre les indications : 
+								<a class="color" href="http://www.jeunes.gouv.fr/bafa-bafd" target="_blank">http://www.jeunes.gouv.fr/bafa-bafd</a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -112,16 +111,16 @@
 							<div class="panel-body">
 							<p>  Certains organismes peuvent vous aider à financer votre Formation BAFA : </p>
 							<ul TYPE="square">
-								<li><p> <strong>La CAF</strong> : une aide nationale Dès confirmation de votre inscription à la 3ème session de la formation, la Caisse Nationale d’Allocations Familiales peut accorder une aide financière (pour tous, sans condition de ressources) Pour en bénéficier, télécharger et imprimer le dossier de demande CAF <a class="color" href="http://www.caf.fr/sites/default/files/caf/121/Documents/demande_daide_bafa.pdf" target="_blank">http://www.caf.fr/sites/default/files/caf/121/Documents/demande_daide_bafa.pdf</a></p> Faites compléter ce document à chaque étape de votre formation </p> </li>
+								<li><p> <strong>La CAF</strong> : Dès confirmation de votre inscription à la 3ème session de la formation, la Caisse Nationale d’Allocations Familiales peut accorder une aide financière (pour tous, sans condition de ressources) Pour en bénéficier, télécharger et imprimer le dossier de demande CAF <a class="color" href="http://www.caf.fr/sites/default/files/caf/121/Documents/demande_daide_bafa.pdf" target="_blank">http://www.caf.fr/sites/default/files/caf/121/Documents/demande_daide_bafa.pdf</a></p> Faites compléter ce document à chaque étape de votre formation </p> </li>
 								</br> 
-								<li><p> <strong>La Mutuelle Sociale Agricole</strong> (M.S.A.) : Elle est destinée aux jeunes allocataires MSA et n’est pas soumises à conditions de ressources. Pour bénéficier de cette aide, si vous correspondez aux critères d’éligibilité, prenez contact avec votre caisse de Mutuelle Social Agricole dont dépend votre lieu d’habitation. </p></br></li>
+								<li><p> <strong>La Mutuelle Sociale Agricole</strong> (M.S.A.) : L'aide est destinée aux jeunes allocataires MSA et n’est pas soumises à conditions de ressources. Pour bénéficier de cette aide, si vous correspondez aux critères d’éligibilité, prenez contact avec votre caisse de Mutuelle Social Agricole dont dépend votre lieu d’habitation. </p></br></li>
 								<li><p> <strong>Le Conseil Départemental de l’Yonne</strong> : Pour les jeunes de 17 à 21 ans révolus domiciliés dans le département de l’Yonne, il n’y a pas de conditions de ressources minimum des familles. Pour bénéficier de cette aide, télécharger et imprimer le dossier d’inscription et la Convention Tripartite à retourner avec votre dossier d’inscription : <a class="color" href="http://www.lyonne.com/Sports-et-Jeunesse/Jeunesse/Aide-au-BAFA-et-au-BAFD " target="_blank">http://www.lyonne.com/Sports-et-Jeunesse/Jeunesse/Aide-au-BAFA-et-au-BAFD </a> </p></br></li>
 								<li><p> <strong>Le Pôle Emploi</strong> peut prendre en charge tout ou une partie de votre formation. Prenez contact avec votre conseiller pour étudier votre dossier et vos droits à la formation. </p></br></li>
 								<li><p> <strong>Les Comités d’entreprise</strong> </p></br></li>
 								<li><p> <strong>Les Communautés de Communes</strong> </p></br></li>
 								<li>	<p><strong> Votre employeur</strong></p></br></li>
 								<li><p> Pour plus de facilité, il est également possible de <strong>payer en trois fois</strong>, contactez nous pour plus d'informations. </p></li>
-								</ul>													
+								</ul>															
 							</div>
 						</div>
 					</div>
@@ -133,8 +132,8 @@
 						</div>
 						<div id="collapseNine" class="panel-collapse collapse">
 							<div class="panel-body">
-								Après l'inscription, <strong>selon votre moyen de paiement</strong>, vous serez redirigéré sur une page de paiement puis un email de confirmation ou vous recevrez immédiatement un email sans passer par le paiement. Une vérification des papiers fournis est nécessaire pour confirmer l'inscription. 
-								Si vous bénéficier d'une aide, celle-ci sera réduite du montant à payer mais vous devrez nous envoyer un chèque d'ARRHES du montant de la bourse qui ne sera encaisser qu'au cas où l'aide est refusé <strong>(toutes les informations complètes se trouveront dans le mail)</strong>.
+								<p>Après l'inscription, <strong>selon votre moyen de paiement:</strong>, si vous choisissez de regler par carte bancaire ou PayPal,  vous serez redirigéré sur une plateforme de paiement. si vous régler par un autre moyen de paiement (chèques, espèces...) <strong>Un email précisant les modalités vous sera envoyé</strong>. Une vérification des documents à fournir est nécessaire pour confirmer l'inscription. 
+								Si vous bénéficiez d'une aide, celle-ci sera automatiquement déduite du montant à payer en ligne. Dans ce cas, il sera nécessaire d'envoyer un chèque de caution du montant de la bourse qui ne sera encaissé qu'en cas de non attribution de l'aide.</p>
 							</div>
 						</div>
 					</div>
@@ -146,9 +145,9 @@
 						</div>
 						<div id="collapseTen" class="panel-collapse collapse">
 							<div class="panel-body">
-								Les stages proposés en <strong>internat</strong> (pension complète) sont conçus de manière a ce que le stagiaire est un accompagnement maximal de l'équipe de formateur, des travaux de groupe sont également organisés en soirée ainsi que des animations. Le rythme du stage est adapté au groupe de stagiaire. Les stages en internat permettent de vivre une vraie vie en collectivité.
+								<p>Les stages proposés en <strong>internat</strong> (pension complète) sont conçus de manière à ce que le stagiaire est un accompagnement maximal de l'équipe de formateur, des travaux de groupe sont également organisés en soirée ainsi que des animations. Le rythme du stage est adapté au groupe de stagiaire. Les stages en internat permettent de vivre une vraie vie en collectivité.
 
-								Les sessions en <strong>demie pension</strong> (restauration du midi) proposent une pédagogie active accès sur l'autonomie, en effet, des travaux de recherche, de préparation sont demandés a chaque stagiaire tous les soirs. 
+								Les sessions en <strong>demie pension</strong> (restauration du midi) proposent une pédagogie active accès sur l'autonomie, en effet, des travaux de recherche, de préparation sont demandés à chaque stagiaire tous les soirs. </p>
 								
 							</div>
 						</div>
@@ -161,7 +160,7 @@
 						</div>
 						<div id="collapseEleven" class="panel-collapse collapse">
 							<div class="panel-body">
-								Pour trouver le calendrier des <strong>stages BAFA</strong> cliquer <a class="color" href="http://localhost/projet/bafa.php" target="_blank"> ici </a>, calendrier des <strong>stages BAFD</strong> <a class="color" href="http://localhost/projet/bafd.php" target="_blank"> ici </a>
+								<p>Pour trouver le calendrier des <strong>stages BAFA</strong> cliquer <a class="color" href="http://localhost/projet/bafa.php" target="_blank"> ici </a>, calendrier des <strong>stages BAFD</strong> <a class="color" href="http://localhost/projet/bafd.php" target="_blank"> ici </a></p>
 							</div>
 						</div>
 					</div>
@@ -173,8 +172,8 @@
 						</div>
 						<div id="collapseTwelve" class="panel-collapse collapse">
 							<div class="panel-body">
-								Ces questions sont traitées durant la période de formation et apporteront une aide concrète aux stagiaires. La FSCF travaille avec son réseau de partenaires locales et nationales afin de mettre en relation les organisateurs d'ACM et les stagiaires.
-								Cependant suivant la période, <strong>il est souvent souhaitable d'avoir déjà explorer quelques pistes avant même de rentrer en formation.</strong> Vous trouverez ici  la liste des organisateurs locaux.
+								<p>Ces questions sont traitées durant la période de formation et apporteront une aide concrète aux stagiaires. La FSCF travaille avec son réseau de partenaires locaux et nationaux afin de mettre en relation les organisateurs d'ACM et les stagiaires.
+								Cependant suivant la période, <strong>il est souvent souhaitable d'avoir déjà exploré quelques pistes avant même de rentrer en formation.</strong> Vous trouverez la liste des organisateurs locaux <a href=""> ici </a>.</p>
 							</div>
 						</div>
 					</div>
@@ -186,8 +185,7 @@
 						</div>
 						<div id="collapseThirteen" class="panel-collapse collapse">
 							<div class="panel-body">
-								Les ressources pédagogiques sont accessibles à chaque stagiaire une fois sa <strong> session terminée</strong>. Vous y retrouverez les contenus théoriques de formation, les jeux, chants... ainsi que les photos de votre stage.   
-
+								<p>Les ressources pédagogiques sont accessibles à chaque stagiaire une fois sa <strong> session terminée</strong>. Vous y retrouverez les contenus théoriques de formation, les jeux, chants... ainsi que les photos de votre stage.</p>   
 							</div>
 						</div>
 					</div>
