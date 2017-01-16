@@ -27,14 +27,19 @@ textarea{ /* Empèche le redimensionnement du textarea */
 	width: auto;
 }
 
-/* Centre, et met en avant le titre de la page "Inscription" */
-.title{
-	margin-bottom: 8%;
-    text-align: center;
-    font-size: 3em;
-	margin-top: 32px;
 
+.title{ /*  titre h1 en Arial, taille de la font, mise en gras, écartement entre les mots, couleur du titre, margin en haut et en bas, mise en place d'un border et décalement du texte par rapport au border */
+	font-family: Arial;
+	font-size: 43px;
+	font-weight: 600;
+    line-height: 40px;
+	color: #445561;
+	margin-bottom: 4%;
+    margin-top: 25px;
+	border-left: 11px solid #E32213;
+    padding-left: 11px;
 }
+
 
 /* Décale la div du bas pour aérer la page */
 .pad {/* pad correspond à la partie checkbox */
@@ -88,7 +93,7 @@ display: inherit;
 		width: 80%;
 	}
 	.title{ /* redimensionne le titre "inscription" */
-		    font-size: 2em;
+		font-size: 2em;
 	}
 	textarea{ /* la textarea déborde en responsive, alors initialisation d'une largeur */
 		width: 85%;

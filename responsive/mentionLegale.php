@@ -1,8 +1,9 @@
 <?php require ('header.php'); ?>
-<h1 class="titreprofil">MENTION LÉGALES</h1>					
+<h1 class="titreprofil">MENTION<br>LÉGALES</h1>					
 <div class="container">
 	<!-- debut section avec le texte -->
-	<section class="col-md-6 col-xs-6 mentionplace">
+	<section class="col-md-2" >	</section>
+	<section class="col-md-8 col-xs-12">
 			<p>
 				<br/>
 				<b><h4 class="blue2">INFORMATIONS SUR L'EDITEUR DU SITE INTERNET</h4></b>
@@ -72,6 +73,7 @@
 				<br/>                  
 			</p>
 		</section>
+		<section class="col-md-2" >	</section>
 		<!-- fin de la section cgu -->
 	</div>
 </div>	

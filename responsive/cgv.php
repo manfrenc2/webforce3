@@ -1,10 +1,10 @@
 <!-- barre de header principale avec logo, inscription et connexion -->
 <?php require ('header.php'); ?>
 
+		<h1 class="titreprofil">CONDITIONS<br> GÉNÉRALES<br> DE<br> VENTE</h1>					
 	<!-- debut section avec le texte -->
-	<section class="col-md-6 col-xs-6 cgvplace">
-		<h1 class="titreprofil">CONDITIONS GÉNÉRALES DE VENTE</h1>					
-
+		<section class="col-md-2" >	</section>
+		<section class="col-md-8 col-xs-12">
 			<p>
 				<br/>
 				<h4 class="yellow2"><b>	Inscription et suivi administratif de votre dossier :</b></h4>
@@ -63,6 +63,7 @@
 				Les informations recueillies sont nécessaires pour votre  inscription et/ou adhésion. Elle font l'objet d'un traitement informatique et sont destinées au secrétariat de la fédération. En application des articles 39 et suivants de la loi du 6 janvier 1978 modifiée, vous bénéficiez d'un droit d'accès et de rectification aux informations qui vous concernent. Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez vous adresser à juridique@fscf.asso.fr                                                                                        
 			</p>
 		</section>
+		<section class="col-md-2" >	</section>
 		<!-- fin de la section cgu -->
 </div>	
 <?php require('footer.php')  ?>

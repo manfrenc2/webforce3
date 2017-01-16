@@ -9,13 +9,13 @@
 		<section>
 			<h1 class="title"> INSCRIPTION </h1>	
 			<!-- Début du formulaire d'inscription -->						
-			<form method="post" action="" id="register-form" class="well form-horizontal">
+			<form method="post" action="include/dbinscription.php" id="register-form" class="well form-horizontal">
 				<!-- Organisation sous forme de colonnes -->	
 				<div class="row form">								
 					<div class="col-md-6 colonne">		
 						<div class="form-group">						
 							<label> Choisir sa formation <span class="asterisque">*</span></label>
-							<select class="form-control formation" name="choice" >
+							<select class="form-control formation" name="chooseformation" >
 								<option value=" ">Sélectionnez une formation</option>
 								<option value="bafa1" name="bafa1"> BAFA#1 - session de formation générale  </option>
 								<option value="bafa3" name="bafa3"> BAFA#3 - session d'approfondissement/qualification  </option>
@@ -27,7 +27,7 @@
 						<!-- Pour les formations continues, le thème de la formation continue devra également être spécifié -->
 						<div class="form-group">		
 							<label>Date, lieu de formation, tarif <span class="asterisque">*</span></label>
-							<select class="form-control lieu" name="choice" value="choosedateforma" >
+							<select class="form-control lieu" name="choosedateforma" value="choosedateforma" >
 								<option value=" ">Sélectionnez une date</option>
 								<option value="dateplaceprice" name="dateplaceprice"> BAFA 1 - 18 novembre 2017 - Auxerre - 452 € </option>
 							</select>
@@ -35,7 +35,7 @@
 						<!-- Le choix des thèmes devra être uniquement possible lors du choix de la formation BAFA 3, BAFD 3 -->
 						<div class="form-group">		
 							<label>Thème <span class="asterisque">*</span></label>
-							<select class="form-control theme" name="choice" value="theme" >
+							<select class="form-control theme" name="theme" value="theme" >
 								<option value=" ">Choisissez un thème</option>
 								<option value="periodappro" name="periodappro"> La petite enfance </option>
 							</select>
@@ -55,12 +55,12 @@
 							</div>
 						<div class="form-group">
 							<label class="control-label"> Téléphone de la personne <span class="asterisque">*</span></label>
-							<input class="form-control" type="text" name="phone" id="telurg"/>
+							<input class="form-control" type="text" name="telurg" id="telurg"/>
 						</div>
 						<div class="form-group">
 							<label id="aide"> Je dispose d'une aide financière <span class="asterisque">*</span> </label></br>
-							<input  type="radio" name="aide" value="yes"/> <span> Oui</span>
-							<input  type="radio" name="aide" value="no"/> <span>Non</span>
+							<input  type="radio" name="aide" value="1"/> <span> Oui</span>
+							<input  type="radio" name="aide" value="0"/> <span>Non</span>
 						</div>
 						<div class="form-group">
 							<label> Nom de l'organisme <button type="button" class="btn btn-xs resphidden" data-toggle="tooltip" data-placement="right" title="L'organisme qui vous octroie cette aide financière">?</button></label>
@@ -78,10 +78,14 @@
 							<label> Photo d'identité <span class="asterisque">*</span> <button type="button" class="btn btn-xs resphidden" data-toggle="tooltip" data-placement="right" title="Seulement les images sont acceptées.">?</button></label>
 							<input type="file" name="photoid" accept="image/*" />
 						</div>
+						<div class="form-group">
+							<label> Justificatif de domicile <span class="asterisque">*</span> <button type="button" class="btn btn-xs resphidden" data-toggle="tooltip" data-placement="right" title="Seulement les images sont acceptées.">?</button></label>
+							<input type="file" name="photoid" accept="image/*" />
+						</div>
 						<!-- Selon le type de paiement, faire une redirection (via stripe; paypal ou message confirmant l'envoi du formulaire et l'envoi donc d'un email avec les informations pour payer (adresse, montant etc))  -->
 						<div class="form-group">
 							<label> Choissisez votre moyen de paiement<span class="asterisque">*</span></label>
-							<select class="form-control" name="choice" >
+							<select class="form-control" name="choosepay" >
 								<option value=" ">Choisissez votre mode de paiement</option>
 								<option value="cb" name="cb">CB</option>
 								<option value="cheque" name="cheque">Chèque</option>
@@ -98,7 +102,7 @@
 						</div>
 						<div class="form-group">
 							<label> Nom <span class="asterisque">*</span></label>
-							<input class="form-control" type="text" name="lastname" id="lastname"/>
+							<input class="form-control" type="text" name="name" id="lastname"/>
 						</div>
 						<div class="form-group">
 							<label> Prénom <span class="asterisque">*</span></label>
@@ -106,7 +110,7 @@
 						</div>
 						<div class="form-group">
 							<label> Adresse E-mail <span class="asterisque">*</span></label>
-							<input class="form-control" type="text" name="email" id="email"/>
+							<input class="form-control" type="text" name="mail" id="email"/>
 						</div>
 						<div class="form-group">					
 							<label> Date de naissance <span class="asterisque">*</span</label>
@@ -118,7 +122,7 @@
 						</div>
 						<div class="form-group">
 							<label> Code Postal <span class="asterisque">*</span></label>
-							<input class="form-control" type="text" name="zipCode" id="zipCode" maxlength="5"/>
+							<input class="form-control" type="text" name="codepo" id="zipCode" maxlength="5"/>
 						</div>
 						<div class="form-group">
 							<label> Ville <span class="asterisque">*</span></label>
@@ -126,7 +130,7 @@
 						</div>
 						<div class="form-group">
 							<label> Téléphone <span class="asterisque">*</span></label>
-							<input class="form-control" type="text" name="phone" maxlength="15" id="tel"/>
+							<input class="form-control" type="text" name="tel" maxlength="15" id="tel"/>
 						</div>
 						<div class="form-group">
 							<label> N° de sécurité sociale <span class="asterisque">*</span></label>

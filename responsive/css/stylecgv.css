@@ -13,17 +13,18 @@ section > h4 { /* centrage des titres d'article */
 	text-align: center;
 }
 
-.cgvplace{ /* placement du texte */
-    margin-left: 25%;
-    margin-bottom: 4%;
-}
-
 .titreprofil{ /* modification sur le titre */
-	margin-bottom: 8%;
-    text-align: center;
-    font-size: 32px;
+	font-family: Arial;
+	font-size: 43px;
+	font-weight: 600;
+    line-height: 41px;
+	color: #445561;
+	margin-bottom: 4%;
     margin-top: 25px;
+	border-left: 11px solid #e5007e;
+    padding-left: 11px;
 	text-transform: uppercase;
+	margin-left: 2%;
 }
 .blue2{
 	color:#57abe0;
@@ -36,4 +37,12 @@ section > h4 { /* centrage des titres d'article */
 }
 .yellow2{
 	color:#f4c000;
+}
+
+/* Responsive du site mobile */
+@media screen and (max-width: 767px){
+	.titreprofil{ /* réduit le font size du titre en mobile */
+		font-size: 35px;
+	}
+	
 }

@@ -14,16 +14,18 @@ section > h4 { /* centrage des titres d'article */
 	text-align: center;
 }
 
-.titreprofil{
-	margin-bottom: 8%;
-    text-align: center;
-    font-size: 32px;
+.titreprofil{ /* mise en forme du titre */
+	font-family: Arial;
+	font-size: 43px;
+	font-weight: 600;
+    line-height: 41px;
+	color: #445561;
+	margin-bottom: 4%;
     margin-top: 25px;
+	border-left: 11px solid #009ee2;
+    padding-left: 11px;
 	text-transform: uppercase;
-}
-.mentionplace{ /* placement du texte */
-    margin-left: 25%;
-    margin-bottom: 4%;
+	margin-left: 2%;
 }
 
 .blue2{

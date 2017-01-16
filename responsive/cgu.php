@@ -2,8 +2,9 @@
 <?php require ('header.php'); ?>
 
 	<!-- debut section avec le texte -->
-	<section class="col-md-6 col-xs-6 cguplace">
-		<h1 class="titreprofil">CONDITIONS GÉNÉRALES D'UTILISATION</h1>					
+	<h1 class="titreprofil">CONDITIONS<br> GÉNÉRALES<br> D'UTILISATION</h1>	
+	<section class=" col-md-2" >	</section>
+	<section class="col-md-8 col-xs-12">	
 			<p>
 				<br/>
 				<b><h4 class="blue2">ARTICLE 1 : Objet</h4></b>
@@ -157,8 +158,8 @@
 				<br/>
 				La législation française s'applique au présent contrat. En cas d'absence de résolution amiable d'un litige né entre les parties, seuls les tribunaux [du ressort de la Cour d'appel de la ville d'Auxerre sont compétents.
 			</p>
-			</section>
+		</section>
+		<section class=" col-md-2" >	</section>
 		<!-- fin de la section cgu -->
-
 </div>	
 <?php require('footer.php')  ?>

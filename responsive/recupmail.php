@@ -3,7 +3,7 @@
 
 	<!-- debut section avec le texte -->
 	<section>
-		<h1 class="titrerecup">Mot de passe oublié ?</h1>					
+		<h1 class="titrerecup">Mot <br>de<br> passe<br> oublié ?</h1>					
 		<div>
 			<h3 class="titreemail">Pour récuperer votre mot de passe, merci de nous indiquer votre adresse email</h3>
 		</div>
