@@ -6,47 +6,29 @@
 
 
 
-section{ /* Modication de la font pour toute la section */
+section{ /* Modication de la font pour toute la section (sauf le titre qui sera initialisé ailleurs) */
 	font-family: 'Raleway',sans-serif;
 } 
 
-/**** Section 1 ****/
+/**** Section 1 avec images + textes  ****/
 
-.titreFormateur{ /* placement titre h1 */
-	margin-bottom: 8%;
-    text-align: center;
-    font-size: 30px;
+.titreFormateur{ /*  titre h1 en Arial, taille de la font, mise en gras, écartement entre les mots, couleur du titre, margin en haut et en bas, mise en place d'un border et décalement du texte par rapport au border */
+	font-family: Arial;
+	font-size: 43px;
+	font-weight: 600;
+    line-height: 40px;
+	color: #445561;
+	margin-bottom: 4%;
     margin-top: 25px;
-	text-transform: uppercase;
-}
-.titleh4{ /* mise au centre des titres h4*/
-	text-align: center;
+	border-left: 11px solid #fab900;
+    padding-left: 11px;
 }
 
-.sectionmoove{ /* placement de la section dates + bouton */
+.movequote{ /* déplacement de la div avec le texte concernant la FSCF */
 	margin-bottom: 4%;
 }
 
-.place > p{ /* Mettre en forme les paragraphes */
-	text-align: justify;
-    margin-top: 3%;
-
-}
-
-.myButton { /*  forme du bouton nous contacter + place dans div à droite*/
-    padding: 12px 21px 12px 21px;
-    font-size: 11px;
-    text-transform: uppercase;
-    background: rgb(227, 34, 19);
-    border-radius: 10px;
-	margin-left: 80%;
-}
-
-.place{ /* centre les deux boutons FORMATEUR BAFA/BAFD et COMMENT DEVENIR FORMATEUR */
-	text-align: center;
-}
-
-[data-wipe] { /* création des deux boutons avec effet */
+[data-wipe] { /* création des deux boutons avec effet "formateur bafa/bafd" et "comment devenir formateur" */
 	padding: 12px 18px;
 	position: relative;
 	border: 1px solid #445561;
@@ -92,29 +74,86 @@ section{ /* Modication de la font pour toute la section */
 [data-wipe]:hover:after { /* initialise le hover quand on sort du bouton */
 	left: 0;
 	text-indent: 0;
-	transition: 0s 0.2s ease-in-out;
+	transition: 0s 0.4s ease-in-out;
 }
+
+.myButton { /*  forme du bouton nous contacter + place dans div à droite*/
+    padding: 8px 14px 12px 21px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgb(227, 34, 19);
+    border-radius: 10px;
+	 float:right;
+}
+
+a:hover{ /* couleur du bouton en hover */
+	color:#23527c;
+}
+
+p.moovep { /* tous les p qui ont une classe moovep sont en justify */
+	    text-align: justify;
+}
+
+/***** propriété sur les images */ 
+
+.imgforma{ /* border sur les images et mise en place */
+	margin: 0 0 15px 0;
+	padding: 4px; 
+	border: 1px solid #D6D6D6;  
+	width: 98%;
+					
+}
+.hover11 figure img { /* opacité sur les deux images */
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover11 figure:hover img {/* opacité sur les deux images */
+	opacity: .5;
+}
+
 
 /**** Section 2 pour date ****/
 .listplace{ /* placement de la liste */
 	float: left;
 }
 
+.sectionmoove{ /* placement de la section dates */
+	margin-bottom: 4%;
+}
 
 
 /* Responsive du site mobile */
 @media screen and (max-width: 767px){
-	.myButton{
-		margin-left: 0%;
-	}
-	
-	p{
-		margin: auto;	
-		width: 90%;
-		margin-top: 6%;
-	}
-	.row{
+
+
+	.row{ /* surcharge de la classe bootstrap pour éviter les margin inutiles */
 		margin-right: 0px;
 		margin-left: 0px;
 	}
+	.moovep{ /* espace les textes + font size */
+		margin-bottom: 8%;
+		font-size: 14px;
+	}
+	.place{ /* centre les deux boutons FORMATEUR BAFA/BAFD et COMMENT DEVENIR FORMATEUR */
+	text-align: center;
 }
+
+	.titreFormateur{ /* réduit le font size du titre en mobile */
+		font-size: 35px;
+	}
+	
+}
+
+
+@media screen and (max-width: 991px){
+	.place{ /* centre les deux boutons FORMATEUR BAFA/BAFD et COMMENT DEVENIR FORMATEUR */
+	text-align: center;
+	}
+	.moovep{ /* espace les textes */
+		margin-bottom: 4%;
+	}
+}
+
+	
+	
