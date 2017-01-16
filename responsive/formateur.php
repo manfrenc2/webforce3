@@ -11,7 +11,7 @@
 						 <figure><img src="img/devforma.jpg" class="imgforma img-fluid moovep" alt="photo devenir formateur"/></figure>	
 					</div> 
 					<div class="col-md-6 col-xs-12 col-md-pull-6 moovep" > <!-- div décalé sur la gauche -->
-						<div class="place"><a href="#" class="btn" data-wipe="Formateur BAFA / BAFD">Formateur BAFA / BAFD </a> <br> </div><br>
+						<div class="place"><a class="btn" data-wipe="Formateur BAFA / BAFD">Formateur BAFA / BAFD </a> <br> </div><br>
 						<br>
 						<p class="moovep">					
 							Le rôle du formateur BAFA-BAFD consiste à :
@@ -33,7 +33,7 @@
 						<figure><img src="img/DSC_0008.jpg" class="imgforma" alt="photo devenir formateur"/></figure> <!-- deuxième photo  -->
 					</div>
 					<div class="col-md-6 col-xs-12 moovep">
-						<div class="place"><a href="#" class="btn" data-wipe="Comment devenir formateur ?">Comment devenir formateur ?</a> <br> </div>
+						<div class="place"><a  class="btn" data-wipe="Comment devenir formateur ?">Comment devenir formateur ?</a> <br> </div>
 						<br><br>
 						<p class="moovep">
 							La première condition est d'être titulaire du BAFA et/ou du BAFD (ou équivalence), avoir une expérience significative et reconnue dans l’encadrement d'Accueil Collectif de Mineurs et être doté de véritables capacités d'expression orale.

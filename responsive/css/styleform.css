@@ -78,7 +78,7 @@ section{ /* Modication de la font pour toute la section (sauf le titre qui sera 
 }
 
 .myButton { /*  forme du bouton nous contacter + place dans div à droite*/
-    padding: 8px 14px 12px 21px;
+    padding: 12px 14px 12px 21px;
     font-size: 11px;
     text-transform: uppercase;
     background: rgb(227, 34, 19);
