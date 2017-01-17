@@ -1,0 +1,209 @@
+/*********************************************************************/
+/*																	 */
+/*							   INDEX								 */
+/*																	 */
+/*********************************************************************/
+
+section{ /* Modication de la font pour toute la section + décalement du footer */
+	font-family: 'Raleway',sans-serif;
+	margin-bottom: 4%;
+} 
+
+
+/************************ SLIDER ************************/ 
+
+/* TRANSITION DU CAROUSEL avec opacité et fluidité */ 
+.carousel-fade .carousel-inner .item {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/* fin de la transition avec opacité et fluidité */ 
+
+
+/* taille du slide affiché sur le site*/
+.fade-carousel .carousel-inner .item {
+    height: 53vh;
+}
+
+/* paramètre sur les indicateur pour changement de slide */
+.fade-carousel .carousel-indicators > li { 
+    margin: 0 2px;
+    background-color: #fab900;
+    border-color: #fab900;
+    opacity: 0.5;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/* modification sur les titres des slides */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* apparition du texte avec opacité et fondu */
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/* bouton sur le slide */
+.btn.btn-lg {
+	padding: 10px 40px;
+}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    background-color: #009ee1;
+    border-color: #009ee1;
+    margin: 20px auto;
+}
+/* permet de paramètrer la photo et lui mettre une opacité de base */
+.imgenplace { 
+    width: 100%;
+    height: 100%;
+    background-color: #5d6776;
+    opacity: .7;
+}
+/* permet d'afficher la photo sur le slide */
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3,
+.fade-carousel .slides .slide-4,
+.fade-carousel .slides .slide-5{
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+/* lien menant sur les photos */
+.fade-carousel .slides .slide-1 { /* bafa */
+  background-image: url(../img/DSC_0785.jpg);
+}
+.fade-carousel .slides .slide-2 { /* bafd */
+  background-image: url(../img/bafd.jpg);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(../img/forma.jpg);
+}
+.fade-carousel .slides .slide-4 {
+  background-image: url(../img/devforma.jpg);
+}
+.fade-carousel .slides .slide-5 {
+  background-image: url(../img/faq.jpg);
+}
+
+/* DATES DE FORMATION */
+
+.dates select, .btn h3{
+	width: auto;
+	color: black;
+}
+.dates select{
+	margin-top: 7px;
+}
+
+/* Qui sommes nous */
+.infos{
+	font-family: Arial;
+	font-size: 43px;
+	font-weight: 600;
+    line-height: 41px;
+	color: #445561;
+    margin-top: 25px;
+	border-left: 11px solid #e5007e;
+    padding-left: 11px;
+	text-transform: uppercase;
+}
+
+/* fait un flou sur les images afin de glisser dessus*/
+.hover07 figure img {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover07 figure:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+.enpls{
+	padding-bottom: 5%;
+}
+
+/* responsive mobile */
+@media screen and (max-width: 767px){
+	
+	.carousel{ /* décale le slide du header */
+		margin-top: 7%;
+	}
+	.titreprofil{ /* réduit le font size du titre en mobile */
+		font-size: 35px;
+	}
+	
+	.hero h1{ /* paramètre la taille de font */
+		font-size: 4em;
+		margin: auto;
+	}
+	.infos{
+		font-size: 33px;
+	}	
+}
+
+
+
+
+
+
+

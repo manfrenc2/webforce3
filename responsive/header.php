@@ -103,13 +103,14 @@
 				<div class="menu">  <!-- menu pour la version mobile -->
 					<ul>
 						<a href="index.php"><li>ACCUEIL</li></a>
+						<a href="inscription.php"><li>JE M'INSCRIS </li></a>
 						<a href="bafa.php"><li>BAFA</li></a>
 						<a href="bafd.php"><li>BAFD</li></a>
 						<a href="formcontinue.php"><li>FORMATIONS CONTINUES</li></a>
 						<a href="formateur.php"><li>DEVENIR FORMATEUR</li></a>
 						<a href="faq.php"><li>FAQ</li></a>
 						<a href="contact.php"><li>CONTACTEZ NOUS</li></a>
-						<a href="index.php#qsn"><li>QUI SOMMES NOUS ?</li></a>
+						<a href="index.php#qsn"><li>QUI SOMMES NOUS ?</li></a>					
 					</ul>
 				</div>
 			</header>
