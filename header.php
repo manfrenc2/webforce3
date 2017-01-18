@@ -1,75 +1,176 @@
 <!-- 1ère découpe (header.php)-->
+<?php
+session_start();
+require_once'include/dbconfig.php';
+
+
+if (isset($_POST["login"])) { //Si le champs login a été renseigné par l'utilisateur, exécuter la suite :
+	$pseudo = $_POST["login"]; 	// On récupère le pseudo entré dans une variable.
+	$mdp = htmlspecialchars($_POST["password"],ENT_QUOTES);	// On récupère le mot de passe entré dans une variable. Utilisation de la fonction htmlspecialchars, qui convertit tous les guillemets simples en doubles et inversemement (c'est le mode ENT_QUOTES). Ainsi l'utilisateur ne peut pas utiliser de guillements dans le champs mot de passe et ne peut donc pas se connecter frauduleusement.
+    //die();
+    crypt_password("$mdp");   // Cryptage du mot de passe.
+    // $sql = "SELECT * FROM client WHERE email = '$pseudo' AND pass = '".crypt_password($mdp)."'"; // Requête que l'on va envoyer à la base de donnée.
+    $sql = "SELECT * FROM stagiaire WHERE Email = '$pseudo'"; // Requête que l'on va envoyer à la base de donnée.
+    $result = mysqli_query($conn, $sql); //Envoi de la requête qu'on stock dans la variable result
+    $resultarr = mysqli_fetch_array($result); //On converti le résultat de "result" sous forme de tableau pour faciliter la récolte d'information.
+    if(mysqli_num_rows($result) > 0) {  // Si le résultat de notre requête nous retourne au moins un élément alors exécuter la suite.
+       if ($resultarr['mdp'] != crypt_password($mdp)){ // On vérifie que le mot de passe du champs "pass" est différent du mot de passe crypté entré par l'utilisateur.
+        header("location:index.php?message=Passeword+%20+error");   // Envoie à la page index.php et affecte à la variable "message" un message d'erreur.
+        }else { // Sinon toutes les information entrées sont correct.
+                session_start(); //Démarrage de la session.
+                $_SESSION['connection']=TRUE; //On affecte à la variable $_SESSION, la valeur TRUE pour lui signaler que l'on est connecté.
+                $_SESSION['id']=session_regenerate_id(); //On affecte un id de connexion unique, celui-ci sera différent à la prochaine connexion.
+                $_SESSION['ip']=$_SERVER['REMOTE_ADDR']; //On affecte l'adresse IP du client qui demande la page courante.
+                print_r($_SESSION);
+                //die;
+                header("location:profil.php"); //On envoie l'utilisateur sur sa page de connecxion.
+     //       die;
+        }
+    }
+}
+
+function crypt_password($mdp){    //On définie une fonction ayant pour rôle de crypter.
+  $arr = str_split($mdp);  //On définie une variable $arr qui récupère le mot de passe aléatoire et le découpe en caractères pour l'affecter à un tableau.
+  $passwordFinal = "1";
+  foreach($arr as $row){ //Recopier chaque case du tableau $arr = M I K E dans $row.
+  
+    $passwordFinal .= (ord($row))*2;
+    $passwordFinal .= hash('gost', $passwordFinal);
+    $passwordFinal = hash('whirlpool', $passwordFinal);
+    $passwordFinal .= hash('sha512', $passwordFinal);
+    $passwordFinal .= "*/*$".$passwordFinal."+-+".$passwordFinal."%!?";
+    $passwordFinal = hash('md4', $passwordFinal);
+  }
+  return $passwordFinal;
+}
+
+?>
+
 <!doctype HTML>
 
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<!-- rendre compatible la mise en forme sur edge -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<!-- comportement que le navigateur doit adopter concernant l'affiche du site (par rapport à l'écran)-->
-		<?php $title=""; ?>
-		<!-- Shortcut du logo du site -->
-		<link rel="icon" type="image/png" href="img/shortcut_img.png"/> 
-		<!-- import du fichier Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-		<!-- import du fichier de style CSS pour la page d'inscription -->
-		
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		
-		<link rel="stylesheet" type="text/css" href="css/styleheader.css">
-		<link href="css/inscription.css" rel="stylesheet"/>	
-		<link rel="stylesheet" type="text/css" href="css/styleC.css">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link href="css/styleFooter.css" rel="stylesheet"/>
-		<link href="css/styleBAFA.css" rel="stylesheet" media="screen">	
-		<link href="css/styleBAFD.css" rel="stylesheet" media="screen">	
-		<link href="css/styleform.css" rel="stylesheet" media="screen">
-		<link href="css/stylerecup.css" rel="stylesheet" media="screen">
-		<link href="css/styleprofil.css" rel="stylesheet" media="screen">
-		<link href="css/stylecgu.css" rel="stylesheet" media="screen">
-		<link href="css/stylecgv.css" rel="stylesheet" media="screen">
-		<link href="css/stylelegales.css" rel="stylesheet" media="screen">				
-		<link href="css/styleformation.css" rel="stylesheet" media="screen">
-	</head>
+<head>
+	<meta charset="utf-8">
+	<!-- comportement que le navigateur doit adopter concernant l'affiche du site (par rapport à l'écran)-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- rendre compatible la mise en forme sur edge et chrome -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<!-- Shortcut du logo du site -->
+	<link rel="icon" type="image/png" href="img/shortcut_img.png"/> 
+	<!-- import du fichier Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/styleheader.css">
+	<link href="css/styleFooter.css" rel="stylesheet"/>
+	<!-- import de JQUERY via google -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- import du JS de bootsrap -->
+	<script src="js/bootstrap.min.js"></script>
 	
-	<body>
-		<div id="container"><!--  -->
-			<main>
-				<header>
-					<div class="row"><!-- Entête des pages -->
-						<div class="col-md-3 col-xs-12 logo"><!-- logo FSCF cliquable -->
-							<a href="#"><img src="img/FSCF-Yonne RVB.png" alt="FSCF retour à l'accueil" style="width: 50%"></a>
+	<?php
+	// echo $_SERVER['REQUEST_URI'];
+	// die();
+	if($_SERVER['SERVER_NAME'] == "mabite.alwaysdata.net")
+		$url = "";
+	else
+		$url = "/projet";
+	
+	if($_SERVER['REQUEST_URI'] == $url."/inscription.php") // si la page inscription.php est bien présente
+		echo '<link href="css/styleinscription.css" rel="stylesheet"/>'; // alors charger le css pour cette page et uniquement cette page
+	else if($_SERVER['REQUEST_URI'] == "/faq.php")
+		echo '<link href="css/styleFaq.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == "/profil.php")
+		echo '<link href="css/styleprofil.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/index.php")
+		echo '<link href="css/styleindex.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/reinscription.php")
+		echo '<link href="css/inscription.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/contact.php")
+		echo '<link href="css/stylecontact.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/bafa.php")
+		echo '<link href="css/styleBAFA.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/bafd.php")
+		echo '<link href="css/styleBAFD.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/formcontinue.php")
+		echo '<link href="css/styleformation.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/formateur.php")
+		echo '<link href="css/styleform.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/mentionLegale.php")
+		echo '<link href="css/stylelegales.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/cgu.php")
+		echo '<link href="css/stylecgu.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/cgv.php")
+		echo '<link href="css/stylecgv.css" rel="stylesheet"/>';
+	else if($_SERVER['REQUEST_URI'] == $url."/recupmail.php")
+		echo '<link href="css/stylerecup.css" rel="stylesheet"/>';
+	else
+		echo '<link href="css/styleindex.css" rel="stylesheet"/>';
+	?>
+
+</head>
+
+<body>	
+	<div class="container"><!-- ne pas oublier de fermer cette div dans les contenues principaux juste avant le footer -->			
+		<header>
+			<div><!-- Entête des pages -->
+				<div class="col-md-3 col-xs-3"><!-- logo FSCF cliquable -->
+					<a href="#">
+						<img class="logo" src="img/FSCF-Yonne RVB.png" alt="FSCF retour à l'accueil">
+					</a>
+				</div>
+				<div class="col-md-5 col-xs-9 central"><!-- lien d'inscription -->
+					<div class="inscription ins">
+						<a href="inscription.php"><i class="fa fa-book fa-2x" aria-hidden="true"></i><span>&nbsp Je m'inscris au BAFA/BAFD</span></a>
+					</div>				
+				</div>
+				<div class="col-md-4 col-xs-12 connect"><!-- formulaire de connexion -->
+					<form class="connect" method="post" action="header.php">
+						<div class="form-group"> 
+							<div class="form-group">
+								<label for="connexion" class="connexion connect">Connexion</label>
+								<input class="form-control" type="text" name="login" placeholder="Login"/>
+								</br>
+								<input class="form-control" type="password" name="password" placeholder="Mot de passe"/>
+								</br>
+								<div class="center"><button type="submit" class="buttonlogin">se connecter</button></div> 
+								<div class="passforget"><a class="linkmdp" href="recupmail.php">Identifiant ou mot de passe oublié</a></div>
+							</div>
 						</div>
-						<div class="col-md-4 col-xs-12 central"><!-- lien d'inscription -->
-							<i class="fa fa-book fa-2x" aria-hidden="true"></i></im><a href="inscription.php">Je m'inscris au BAFA/BAFD</a>
-						</div>
-						<div class="col-md-5 col-xs-12 connect"><!-- formulaire de connexion -->
-							<form class="connect" method="post" action="login.php">
-								<label for="connexion">Connexion</label>
-								<input type="text" name="login" placeholder="Login" required>
-								<input type="password" name="password" placeholder="Mot de passe" required>
-								<button type="submit" name="submit">Valider</button><br>
-								<a href="include/oubli.php">Identifiant ou mot de passe oublié</a>
-							</form>
-						</div>
-					</div>
-					<nav class="navbar navbar-light bg-faded"><!-- barre de navigation -->
-						<ul  id="topnav">
-							<li class="nav-item active"><a href="index.php">ACCUEIL</a></li>
-							<li class="barnav nav-item">FORMATIONS<!-- Classe "barnav" pour les règles css -->
-								<ul class="list-group" id="menuScroll"><!-- sous-menu déroulant -->
-									<li><a class="list-group-item"  href="include/bafa.php">BAFA</a></li>
-									<li><a class="list-group-item" href="include/bafd.php">BAFD</a></li>
-									<li><a class="list-group-item" href="include/formations.php">FORMATIONS CONTINUES</a></li>
-									<li><a class="list-group-item" href="include/devenir.php">DEVENIR FORMATEUR</a></li>
-								</ul>
-							</li>
-							<li class="barnav"><a href="include/faq.php">FAQ</a></li>
-							<li class="barnav"><a href="contactmod.php">CONTACTEZ NOUS</a></li>
-							<li class="barnav"><a href="../index.html#infos">QUI SOMMES NOUS ?</a></li>
+					</form>
+				</div>
+			</div>
+			<nav class="navbar navbar-light bg-faded col-md-12 col-xs-12 adjust"><!-- barre de navigation -->
+				<ul id="topnav">
+					<li class="nav-item active mg col-md-2 col-xs-2"><a class="blue" href="index.php">ACCUEIL</a></li>
+					<li class="barnav md nav-item col-md-2 col-xs-2">FORMATIONS
+						<ul class="list-group" id="menuScroll"><!-- sous-menu déroulant -->
+							<li><a class="list-group-item hover1" href="bafa.php">BAFA</a></li>
+							<li><a class="list-group-item " href="bafd.php">BAFD</a></li>
+							<li><a class="list-group-item " href="formcontinue.php">FORMATIONS CONTINUES</a></li>
+							<li><a class="list-group-item " href="formateur.php">DEVENIR FORMATEUR</a></li>
 						</ul>
-					</nav>
-				</header>
-			<!-- Fin de 1ère découpe -->
+					</li>
+					<li class="barnav col-md-2 col-xs-1"><a class="magenta" href="faq.php">FAQ</a></li>
+					<li class="barnav col-md-3 col-xs-3"><a class="red" href="contact.php">CONTACTEZ NOUS</a></li>
+					<li class="barnav col-md-3 col-xs-4"><a  class="yellow" href="index.php#qsn">QUI SOMMES NOUS ?</a></li>
+				</ul>
+			</nav> 
+			<!--menu uniquement visible en responsive -->
+			<div class="hambouton">     <!--bouton hamburger et fermeture -->
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
+			</div>
+			<div class="menu">  <!-- menu pour la version mobile -->
+				<ul>
+					<a href="index.php"><li>ACCUEIL</li></a>
+					<a href="bafa.php"><li>BAFA</li></a>
+					<a href="bafd.php"><li>BAFD</li></a>
+					<a href="formcontinue.php"><li>FORMATIONS CONTINUES</li></a>
+					<a href="formateur.php"><li>DEVENIR FORMATEUR</li></a>
+					<a href="faq.php"><li>FAQ</li></a>
+					<a href="contact.php"><li>CONTACTEZ NOUS</li></a>
+					<a href="index.php#qsn"><li>QUI SOMMES NOUS ?</li></a>
+				</ul>
+			</div>
+		</header>
+
+
