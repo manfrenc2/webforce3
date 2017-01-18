@@ -1,0 +1,248 @@
+/****************************************************/
+/*                                                  */
+/*                   BAFA                           */
+/*                                                  */
+/****************************************************/
+
+
+
+section{ /* Modication de la font pour toute la section */
+	font-family: 'Raleway',sans-serif;
+	margin-bottom: 4%;
+} 
+
+		/***** propriété sur l'image *****/ 
+
+.imgbafa{ /* border sur les images et mise en place */
+	margin: 0 0 15px 0;
+	padding: 4px; 
+	border: 1px solid #D6D6D6;  
+	width: 98%;
+					
+}
+
+.hover11 figure img { /* opacité sur les deux images */
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.hover11 figure:hover img {/* opacité sur les deux images */
+	opacity: .5;
+}
+		/***** fin propriété sur l'image *****/ 
+
+.titreBafa{ /* placement titre principal page */
+	font-family: Arial;
+	font-size: 43px;
+	font-weight: 600;
+    line-height: 41px;
+	color: #445561;
+	margin-bottom: 4%;
+    margin-top: 25px;
+	border-left: 11px solid #009ee2;
+    padding-left: 11px;
+	text-transform: uppercase;
+	margin-left: 2%;
+}
+
+.titreBafa2{ /* placement titre secondaire "étapes" + "à noter" */
+	font-family: Arial;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 41px;
+    color: #445561;
+    margin-bottom: 1%;
+    padding-left: 11px;
+    text-transform: uppercase;
+}
+
+.place{ /* léger décalement entre les différentes étapes du BAFA */
+    margin-bottom: 4%;
+}
+
+
+
+/***** propriété sur la barre de progression *****/ 
+
+
+ 
+.progressbar {/* permet de compter chaque étapes */
+      counter-reset: step !important;
+	  
+  }
+  .progressbar li { /* paramètres généraux sur la barre de progression */
+      list-style-type: none;
+      width: 25%;
+      float: left;
+      font-size: 12px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #7d7d7d;
+  }
+  .progressbar li:before {/* mise en forme */
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+  .progressbar li:after {  /* initialisation de la barre */
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: #7d7d7d;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+  }
+  .progressbar li:first-child:after {/* retirer le prolongement */
+      content: none;
+  }
+  .progressbar li.active {/* couleur du texte dont le li est actif */
+      color: green;
+  }
+  .progressbar li.active:before {/* couleur du cercle */
+      border-color: #55b776;
+  }
+  .progressbar li.active + li:after {/* couleur de la barre */
+      background-color: #55b776;
+  }
+.decalprogress{   /* décalement de la barre de progress*/
+   margin-left: 20%;
+}
+
+
+ 
+ /* mise en forme du bouton */
+.myButton { /*  forme du bouton s'inscrire + place dans div à droite*/
+    padding: 12px 14px 12px 21px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgb(227, 34, 19);
+    border-radius: 10px;
+	 float:right;
+}
+
+
+ /***** propriété sur les boutons dans les étapes *****/ 
+
+ [data-wipe] { /* création des deux boutons avec effet "formateur bafa/bafd" et "comment devenir formateur" */
+	padding: 12px 18px;
+	position: relative;
+	border: 1px solid #445561;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-align: left;
+	color: #445561;
+	overflow: hidden;	
+}
+
+[data-wipe]:before, [data-wipe]:after { /* mise en forme des boutons avant et après leur transformation */
+	content: attr(data-wipe);
+	padding-top: inherit;
+	padding-bottom: inherit;
+	white-space: nowrap;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	color: #F1F1F2;
+	background: #445561;
+}
+
+[data-wipe]:before { /* empêche le texte de sortir de son cadre avant la transformation */
+	left: 0;
+	text-indent: 18px;
+	width: 0;
+}
+
+[data-wipe]:after {/* empêche le texte de sortir de son cadre après la transformation */
+	padding-left: inherit;
+	padding-right: inherit;
+	left: 100%;
+	text-indent: calc(-100% - 36px);
+	transition: 0.2s ease-in-out;
+}
+
+[data-wipe]:hover:before {  /* initialise le hover quand on vient sur le bouton */
+	width: 100%;
+	transition: width 0.2s ease-in-out;
+}
+
+[data-wipe]:hover:after { /* initialise le hover quand on sort du bouton */
+	left: 0;
+	text-indent: 0;
+	transition: 0s 0.4s ease-in-out;
+}
+
+.btn{ /* taille de la police sur tous les boutons */
+	font-size: 12px;
+}
+
+
+/*********** Dates **********/
+.boutondates{ /* placement du bouton6 */
+   margin-top: 5%;
+   margin-bottom: 2%;
+}
+.bouton6 { /* style du bouton des dates calendriers */
+   border-radius:12px 0 12px 0;
+   background: #fab900;
+   border:none;
+   color:#fff;
+   font-size: 15px;
+   padding:6px 0 6px 0;
+   width: 100%;
+}
+
+/*** Responsive pour les mobiles ***/
+@media screen and (max-width: 767px){
+	p{ /* met en valeur les paragraphes au responsive */
+		width: 80%;
+		margin: auto;
+   }
+   	.place{ /* centre les deux boutons FORMATEUR BAFA/BAFD et COMMENT DEVENIR FORMATEUR */
+		text-align: center;
+	}
+   .row{ /* supprime les class row*/
+		margin-right: 0px;
+		margin-left: 0px;
+   } 
+   .titreBafa{ /* décalement titre principal avec la bar de progression */
+		margin-bottom: 13%;
+   }
+   .decalprogress{/* décalement de la barre de progress*/
+		margin-bottom: 4%;
+   }
+   .titreBafa2{ /* titre "les 3 étapes " */
+		text-align: center;
+		margin-top: 9%;
+		margin-bottom: 6%;
+	}
+	.moovep{ /* décalement sur le bas de certaines section*/
+		margin-bottom: 6%;
+	}
+}
+
+
+/***** Responsive tablette  *****/
+@media screen and ( max-device-width:991px){
+
+   .boutondates{ /* je replace le bouton6 */
+		margin-top: 10%;
+		margin-bottom: 2%;
+   }
+   
+   .decalprogress{    /* décalement de la barre de progress*/
+		margin-left: -2%;
+	} 
+}
