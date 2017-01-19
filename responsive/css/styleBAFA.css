@@ -1,11 +1,10 @@
 /****************************************************/
 /*                                                  */
-/*                   BAFA                           */
+/*      BAFA - BAFD - FORMATIONS CONTINUES          */
 /*                                                  */
 /****************************************************/
 
-
-
+ 
 section{ /* Modication de la font pour toute la section */
 	font-family: 'Raleway',sans-serif;
 	margin-bottom: 4%;
@@ -17,8 +16,7 @@ section{ /* Modication de la font pour toute la section */
 	margin: 0 0 15px 0;
 	padding: 4px; 
 	border: 1px solid #D6D6D6;  
-	width: 98%;
-					
+	width: 98%;				
 }
 
 .hover11 figure img { /* opacité sur les deux images */
@@ -32,7 +30,9 @@ section{ /* Modication de la font pour toute la section */
 }
 		/***** fin propriété sur l'image *****/ 
 
-.titreBafa{ /* placement titre principal page */
+		
+		
+.titreGeneral{ /* placement et modif sur titre principal dans les pages */
 	font-family: Arial;
 	font-size: 43px;
 	font-weight: 600;
@@ -46,7 +46,12 @@ section{ /* Modication de la font pour toute la section */
 	margin-left: 2%;
 }
 
-.titreBafa2{ /* placement titre secondaire "étapes" + "à noter" */
+.barreplus{ /* classe supplémentaire de titreGeneral pour changer le border left de couleur selon les pages */
+		border-left: 11px solid #e5007e;
+}
+
+
+.titreGeneral2{ /* placement titre secondaire "étapes" */
 	font-family: Arial;
     font-size: 28px;
     font-weight: 600;
@@ -57,9 +62,10 @@ section{ /* Modication de la font pour toute la section */
     text-transform: uppercase;
 }
 
-.place{ /* léger décalement entre les différentes étapes du BAFA */
+.place{ /* léger décalement entre les différentes étapes */
     margin-bottom: 4%;
 }
+
 
 /***** propriété sur la barre de progression *****/ 
  
@@ -116,8 +122,11 @@ section{ /* Modication de la font pour toute la section */
    margin-left: 16%;
 }
 
+.break{ /* empêche le mot "perfectionnement" dans la session BAFD de déborder sur le reste */
+	 word-wrap: break-word;
+}
 
- 
+
  /* mise en forme du bouton */
 .myButton { /*  forme du bouton s'inscrire + place dans div à droite*/
     padding: 12px 14px 12px 21px;
@@ -131,7 +140,7 @@ section{ /* Modication de la font pour toute la section */
 
  /***** propriété sur les boutons dans les étapes *****/ 
 
- [data-wipe] { /* création des deux boutons avec effet "formateur bafa/bafd" et "comment devenir formateur" */
+ [data-wipe] { /* création des deux boutons avec effet  */
 	padding: 12px 18px;
 	position: relative;
 	border: 1px solid #445561;
@@ -186,7 +195,7 @@ section{ /* Modication de la font pour toute la section */
 
 
 /*********** Dates **********/
-.boutondates{ /* placement du bouton6 */
+.boutondates{ /* placement du bouton */
    margin-top: 5%;
    margin-bottom: 2%;
 }
@@ -206,7 +215,7 @@ section{ /* Modication de la font pour toute la section */
 		width: 80%;
 		margin: auto;
    }
-   	.place{ /* centre les deux boutons FORMATEUR BAFA/BAFD et COMMENT DEVENIR FORMATEUR */
+   	.place{ /* centre les boutons  */
 		text-align: center;
 	}
    .row{ /* supprime les class row*/
@@ -217,11 +226,9 @@ section{ /* Modication de la font pour toute la section */
 		margin-bottom: 13%;
    }
    .decalprogress{/* décalement de la barre de progress*/
-		margin-bottom: 4%;
+		margin-bottom: 4%; 
+		margin-left: 0%;
    }
-   .decalprogress{
-	   margin-left: 0%;
-	}
    .titreBafa2{ /* titre "les 3 étapes " */
 		text-align: center;
 		margin-top: 9%;
@@ -236,14 +243,13 @@ section{ /* Modication de la font pour toute la section */
 /***** Responsive tablette  *****/
 @media screen and ( max-device-width:991px){
 
-   .boutondates{ /* je replace le bouton6 */
+   .boutondates{ /* je replace le bouton */
 		margin-top: 10%;
 		margin-bottom: 2%;
    }
    
    .decalprogress{    /* décalement de la barre de progress*/
 		margin-left: -2%;
-		
-		
+	
 	} 
 }
