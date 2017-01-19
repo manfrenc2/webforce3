@@ -82,7 +82,7 @@
 			</section>
 			<section> <!-- CALENDRIER DES DATES (à rajouter) -->	
 				<div class="boutondates">
-					<a href=""><button class="bouton6"> Découvrez notre calendrier de formation </button></a>
+					<a><button class="bouton6"> Découvrez notre calendrier de formation </button></a>
 				</div>
 				<div>
 					<ul>
