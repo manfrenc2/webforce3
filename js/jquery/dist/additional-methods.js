@@ -611,7 +611,7 @@ $.validator.addMethod( "cpFR", function( value, element ) {
 
 //validation des numéros de téléphone français fixes et mobiles
 $.validator.addMethod( "phoneFR", function( value, element ) {
-	return this.optional( element ) || /^([+][0-9]{1,4}|0)[0-9]{1,3}[/. ]+?([0-9]{1,7}[/. ]+?){1,4}([0-9]{1,7})$/.test( value );
+	return this.optional( element ) || /^0[1-9]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$/.test( value );
 }, "Entrez un numéro de téléphone valide." );
 
 //validation du champs "Jeunesse et Sport"
@@ -626,7 +626,7 @@ $.validator.addMethod( "dateFR", function( value, element ) {
 
 //validation adresse française
 $.validator.addMethod( "adresse", function( value, element ) {
-	return this.optional( element ) || /^[0-9]{1,5}[\, ]\s?[a-z]{1,9}\s[0-9a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ\s\-]{1,}$/i.test( value );
+	return this.optional( element ) || /^[0-9]{1,5}[\, ]\s?[a-z]{1,9}\s[0-9a-z'àâéèêôùûçÀÂÉÈÔÙÛÇ\s\-\.]{1,}$/i.test( value );
 }, "Veuillez entrer votre adresse complète." );
 
 //validation du numéro de sécurité sociale
@@ -649,18 +649,5 @@ $.validator.addMethod( "rangelength", function( value, element, param ) {
 	return this.optional( element ) || ( length >= param[ 0 ] && length <= param[ 1 ] );
 }, $.validator.format);
 
-//format du texte pour les textarea
-// $.validator.addMethod( "ecrit", function( value, element ) {
-	// return this.optional( element ) || /^[0-9a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ\s\-\:\,\.\;\/]{1, }$/i.test ( value );
-// }, "Certains caractères ne sont pas autorisés");
-
-//validation des regex
-// $.validator.addMethod( "regex", function( value, element, regexp ){
-		// if(regexp.constructor != RegExp)
-			// regexp = new RegExp(regexp);
-		// else if(regexp.global)
-			// regexp.lastIndex = 0;
-			// return this.optional(element) || regexp.test(value);
-	// },"erreur expression reguliere" );
 
 }));

@@ -328,16 +328,25 @@ $.extend( $.validator, {
 				this.element( element.parentNode );
 			}
 		},
-		highlight: function( element, errorClass, validClass ) {
+		highlight: function( element, errorClass, validClass ) { //fonction pour les sélections de l'aide et du sexe
 			if ( element.type === "radio" ) {
-				this.findByName( element.name ).addClass( errorClass ).removeClass( validClass );
+				this.findByName( element.name ).removeClass( validClass );
+				//on fait notre if sur le tag "name" des radios concernés, sauf que le message d'erreur pointera sur la div
+				if(element.name === "sexe")
+					$("#sex").html('<label id="sexe-error" class="error" for="sexe">Ce champ est obligatoire.</label>');
+				if(element.name === "aide")
+					$("#aid").html('<label id="aide-error" class="error" for="aide">Ce champ est obligatoire.</label>');
 			} else {
 				$( element ).addClass( errorClass ).removeClass( validClass );
 			}
 		},
-		unhighlight: function( element, errorClass, validClass ) {
+		unhighlight: function( element, errorClass, validClass ) {//pareil que pour la fonction précédente
 			if ( element.type === "radio" ) {
-				this.findByName( element.name ).removeClass( errorClass ).addClass( validClass );
+				this.findByName( element.name ).addClass( validClass );
+				if(element.name === "sexe")
+					$("#sexe-error").remove(); 
+				if(element.name === "aide")			
+					$("#aide-error").remove();
 			} else {
 				$( element ).removeClass( errorClass ).addClass( validClass );
 			}

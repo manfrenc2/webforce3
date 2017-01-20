@@ -11,13 +11,13 @@
 			<section>
 				<h1 class="title"> INSCRIPTION </h1>	
 				<!-- Début du formulaire d'inscription -->						
-				<form method="post" action="#" id="register-form" class="well form-horizontal">
+				<form method="post" action="" id="register-form" class="well form-horizontal">
 					<!-- Organisation sous forme de colonnes -->	
 					<div class="row form">								
 						<div class="col-md-6 colonne">		
 							<div class="form-group">						
 								<label> Choisir sa formation <span class="asterisque">*</span></label>
-								<select class="form-control formation" name="choice" id="formation">
+								<select class="form-control formation" name="choice" >
 									<option value=" ">Sélectionnez une formation</option>
 									<option value="bafa1" name="bafa1"> BAFA#1 - session de formation générale  </option>
 									<option value="bafa3" name="bafa3"> BAFA#3 - session d'approfondissement/qualification  </option>
@@ -74,11 +74,11 @@
 							</div>
 							<div class="form-group">
 								<label> Carte d'identité  <span class="asterisque">*</span></label>
-								<input type="file" name="file" accept="image/*" />
+								<input type="file" name="carteid" accept="image/*" />
 							</div>
 							<div class="form-group">
 								<label> Photo d'identité <span class="asterisque">*</span></label>
-								<input type="file" name="file" accept="image/*" />
+								<input type="file" name="photoid" accept="image/*" />
 							</div>
 							<!-- Selon le type de paiement, faire une redirection (via stripe; paypal ou message confirmant l'envoi du formulaire et l'envoi donc d'un email avec les informations pour payer (adresse, montant etc) -->
 							<div class="form-group">
@@ -113,7 +113,7 @@
 							</div>
 							<div class="form-group">					
 								<label> Date de naissance <span class="asterisque">*</span</label>
-								<input class="form-control" type="text" name="bdate" id="bdate" placeholder="jj/mm/aaaa"/>
+								<input class="form-control" type="date" name="date" id="date" data-date-format="DD/MM/YYYY"/>
 							</div>
 							<div class="form-group">
 								<label> Adresse <span class="asterisque">*</span></label>
@@ -144,16 +144,15 @@
 
 					<div class="pad">					
 						<label><input  type="checkbox"/> Si paiement par un tiers, merci de cocher cette case <button type="button" class="btn btn-xs" data-toggle="tooltip" data-placement="right" title="Uniquement en cas de paiement par une autre personne que vous">?</button></label>
-						<label><input type="checkbox" id="termUse" name="termUse" required /> En cochant cette case, j'atteste avoir les pré-requis de la formation et d'avoir pris connaissance des <a class="link" href="cgu.php">conditions générales de vente </a><span class="asterisque">*</span><button type="button" class="btn btn-xs" data-toggle="tooltip" data-placement="right" title="Vous devez cocher cette case pour pouvoir valider votre inscription">?</button></label>
-						<input type="submit" id="submit" name="submit" class="btn btn-warning hidden"/>	
-						<!-- Success message -->
-						<div class="alert alert-success hidden" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>						
+						<label><input type="checkbox" id="termUse" name="termUse" required /> En cochant cette case, j'atteste avoir les pré-requis de la formation et d'avoir pris connaissance des <a class="link">conditions générales de vente </a><span class="asterisque">*</span><button type="button" class="btn btn-xs" data-toggle="tooltip" data-placement="right" title="Vous devez cocher cette case pour pouvoir valider votre inscription">?</button></label>
+						<input type="submit" id="submit" name="submit" class="btn btn-warning hidden"/>					
 					</div>
 					
 				</form>		
 			</section>
 			<?php require_once 'footer.php'; ?>		
-		<!-- import du JS de bootstrap -->
+		<!-- import du JS de bootstrap 
+		<script src="js/jquery-3.1.1.min.js"></script>-->
 		<script src="http://oss.maxcdn.com/icheck/1.0.2/icheck.min.js"></script>
 		<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
